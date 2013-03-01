@@ -56,9 +56,9 @@ How to get Started
 
 [OpenOCD](http://openocd.sourceforge.net/)
 
-[STLink for Linux](github.com/texane/stlink)
+[STLink for Linux](https://github.com/texane/stlink)
 
-[SAR toolchain for Linux](github.com/esden/summon-arm-toolchain)
+[SAR toolchain for Linux](https://github.com/esden/summon-arm-toolchain)
 
-[Cortex M3 Open Library](github.com/libopencm3/libopencm3)
+[Cortex M3 Open Library](https://github.com/libopencm3/libopencm3)
 
