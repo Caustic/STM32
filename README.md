@@ -21,6 +21,7 @@ How to get Started
         # There are some options that you can set before running this so check the readme if you want.
         ./summon-arm-toolchain
         # Make sure that `$SAR/arm/bin` is on your path where $SAR is the path Summon Arm Toolchain was installed
+        # In env.sh, there is a variable that you can set to point to this path
 
 * Install STLink next
 
