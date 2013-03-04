@@ -18,6 +18,6 @@
 ##
 
 BINARY = usart
-LDSCRIPT = $(TOOLCHAIN_DIR)/examples/stm32/f1/stm32vl-discovery/stm32vl-discovery.ld
-include $(TOOLCHAIN_DIR)/examples/stm32/f1/Makefile.include
+LDSCRIPT = $(OPENCM3_DIR)/examples/stm32/f1/stm32vl-discovery/stm32vl-discovery.ld
+include $(OPENCM3_DIR)/examples/stm32/f1/Makefile.include
 
