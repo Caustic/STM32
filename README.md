@@ -54,6 +54,10 @@ How to get Started
         (gdb) load
         (gdb) c
 
+
+Some Useful Links
+-----------------
+
 [OpenOCD](http://openocd.sourceforge.net/)
 
 [STLink for Linux](https://github.com/texane/stlink)
