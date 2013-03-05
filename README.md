@@ -16,7 +16,7 @@ How to get Started
 
 * Install Summon Arm Toolchain First
 
-        git clone git://github.com/esden/stlink.git
+        git clone git://github.com/esden/summon-arm-toolchain.git
         cd summon-arm-toolchain
         # There are some options that you can set before running this so check the readme if you want.
         ./summon-arm-toolchain
