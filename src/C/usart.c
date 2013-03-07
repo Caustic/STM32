@@ -80,6 +80,9 @@ int main(void)
     /* Blink the LED (PC9) on the board with every transmitted byte. */
     while (1) {
         gpio_toggle(GPIOC, GPIO9);	/* LED on/off */
+        usart_send_blocking(USART1, '\012'); /* Linefeed */
+        usart_send_blocking(USART1, '\012'); /* Linefeed */
+        usart_send_blocking(USART1, '\001'); /* USART1: Send byte. */
         printlcd(message);
         for (i = 0; i < 800000; i++)	/* Wait a bit. */
             __asm__("NOP");
@@ -88,14 +91,3 @@ int main(void)
     return 0;
 }
 
-void printlcd(char *message)
-{
-    usart_send_blocking(USART1, '\012'); /* Linefeed */
-    usart_send_blocking(USART1, '\012'); /* Linefeed */
-    usart_send_blocking(USART1, '\001'); /* USART1: Send byte. */
-    int len, i;
-    len = mystrlen(message);
-    for (i=0; i<len; i++){
-        usart_send_blocking(USART1, message[i]); /* USART1: Send byte. */
-    }
-}

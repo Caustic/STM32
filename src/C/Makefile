@@ -17,10 +17,13 @@
 ## along with this library.  If not, see <http://www.gnu.org/licenses/>.
 ##
 
-OBJS += mystrlen.o
+OBJS += mystrlen.o lcd.o
 BINARY = usart
 LDSCRIPT = $(OPENCM3_DIR)/examples/stm32/f1/stm32vl-discovery/stm32vl-discovery.ld
 include $(OPENCM3_DIR)/examples/stm32/f1/Makefile.include
 
 mystrlen.o: mystrlen.h mystrlen.c
-	arm-none-eabi-gcc -Wall -pedantic -g -c -o mystrlen.o mystrlen.c
+	arm-none-eabi-gcc -Wall -pedantic -g -c -o mystrlen.o mystrlen.c -DSTM32F1
+
+lcd.o: lcd.h lcd.c
+	arm-none-eabi-gcc -Wall -pedantic -g -c -o lcd.o lcd.c -DSTM32F1
