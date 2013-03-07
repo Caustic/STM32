@@ -20,9 +20,9 @@
 #include <libopencm3/stm32/f1/rcc.h>
 #include <libopencm3/stm32/f1/gpio.h>
 #include <libopencm3/stm32/usart.h>
+#include "mystrlen.h"
 
 void printlcd(char *message);
-int mystrlen(char *string);
 void clock_setup(void);
 void usart_setup(void);
 void gpio_setup(void);
@@ -98,15 +98,4 @@ void printlcd(char *message)
     for (i=0; i<len; i++){
         usart_send_blocking(USART1, message[i]); /* USART1: Send byte. */
     }
-}
-
-int mystrlen(char *string)
-{
-    int i;
-    i = 0;
-    while(*string){
-        i = i + 1;
-        string = string + 1;
-    }
-    return i;
 }
