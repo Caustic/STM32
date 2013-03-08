@@ -70,16 +70,19 @@ int main(void)
 {
     int i;
     char *message = "Hello World!";
-
+    unsigned char *mkch0 = "\x19\x00\x04\x03\x07\x0d\x1F\x17\x14\x03"
+                           "\x19\x01\x04\x38\x3c\x36\x3f\x3d\x05\x1c";
     clock_setup();
     gpio_setup();
     usart_setup();
 
     /* Blink the LED (PC9) on the board with every transmitted byte. */
+    clearlcd();
+    for(i = 0; i < 20; i++)
+        usart_send_blocking(USART1, *(mkch0+i));
     while (1) {
         gpio_toggle(GPIOC, GPIO9);	/* LED on/off */
-        clearlcd();
-        printlcd(message);
+        printlcd("\x80\x81");
         for (i = 0; i < 800000; i++)	/* Wait a bit. */
             __asm__("NOP");
     }
