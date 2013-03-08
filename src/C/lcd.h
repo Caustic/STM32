@@ -5,6 +5,6 @@
 #define LCD_HOME '\001'
 
 void printlcd(char *message);
-void clearlcd();
+void clearlcd(void);
 
 #endif

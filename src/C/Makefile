@@ -23,7 +23,7 @@ LDSCRIPT = $(OPENCM3_DIR)/examples/stm32/f1/stm32vl-discovery/stm32vl-discovery.
 include $(OPENCM3_DIR)/examples/stm32/f1/Makefile.include
 
 mystrlen.o: mystrlen.h mystrlen.c
-	arm-none-eabi-gcc -Wall -pedantic -g -c -o mystrlen.o mystrlen.c -DSTM32F1
+	arm-none-eabi-gcc -Wall -pedantic -g -c -o mystrlen.o mystrlen.c -DSTM32F1 $(LDFLAGS)
 
 lcd.o: lcd.h lcd.c
-	arm-none-eabi-gcc -Wall -pedantic -g -c -o lcd.o lcd.c -DSTM32F1
+	arm-none-eabi-gcc -Wall -pedantic -g -c -o lcd.o lcd.c -DSTM32F1 $(LDFLAGS)

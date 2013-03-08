@@ -4,7 +4,6 @@
 #include "lcd.h"
 #include "mystrlen.h"
 
-
 void printlcd(char *message)
 {
     int len, i;
@@ -14,7 +13,7 @@ void printlcd(char *message)
     }
 }
 
-void clearlcd()
+void clearlcd(void)
 {
     usart_send_blocking(USART1, LCD_LF); /* Linefeed */
     usart_send_blocking(USART1, LCD_LF); /* Linefeed */

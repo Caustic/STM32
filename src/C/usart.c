@@ -21,8 +21,8 @@
 #include <libopencm3/stm32/f1/gpio.h>
 #include <libopencm3/stm32/usart.h>
 #include "mystrlen.h"
+#include "lcd.h"
 
-void printlcd(char *message);
 void clock_setup(void);
 void usart_setup(void);
 void gpio_setup(void);
@@ -46,9 +46,7 @@ void usart_setup(void)
             GPIO_CNF_OUTPUT_ALTFN_PUSHPULL, GPIO_USART1_TX);
 
     /* Setup UART parameters. */
-    // usart_set_baudrate(USART1, 38400);
-    /* TODO usart_set_baudrate() doesn't support 24MHz clock (yet). */
-    /* This is the equivalent: */
+    /* Set Buadrate */
     USART_BRR(USART1) = 0x9c4;
 
     usart_set_databits(USART1, 8);
@@ -80,9 +78,7 @@ int main(void)
     /* Blink the LED (PC9) on the board with every transmitted byte. */
     while (1) {
         gpio_toggle(GPIOC, GPIO9);	/* LED on/off */
-        usart_send_blocking(USART1, '\012'); /* Linefeed */
-        usart_send_blocking(USART1, '\012'); /* Linefeed */
-        usart_send_blocking(USART1, '\001'); /* USART1: Send byte. */
+        clearlcd();
         printlcd(message);
         for (i = 0; i < 800000; i++)	/* Wait a bit. */
             __asm__("NOP");
