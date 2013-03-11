@@ -1,0 +1,361 @@
+
+map -a "MachXO" -p LCMXO2280C -t FTBGA256 -s 3 -oc Commercial   "eece444_vga_videocard_eece444_vga_videocard.ngd" -o "eece444_vga_videocard_eece444_vga_videocard_map.ncd" -pr "eece444_vga_videocard_eece444_vga_videocard.prf" -mp "eece444_vga_videocard_eece444_vga_videocard.mrp" "C:/Users/fox/programming/STM32/src/verilog/eece444_vga_videocard.lpf" -c 0            
+map:  version Diamond (64-bit) 2.1.0.103
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2012 Lattice Semiconductor Corporation,  All rights reserved.
+   Process the file: eece444_vga_videocard_eece444_vga_videocard.ngd
+   Picdevice="LCMXO2280C"
+
+   Pictype="FTBGA256"
+
+   Picspeed=3
+
+   Remove unused logic
+
+   Do not produce over sized NCDs.
+
+Part used: LCMXO2280CFTBGA256, Performance used: 3.
+Loading device for application map from file 'mj5g21x17.nph' in environment C:/lscc/diamond/2.1_x64/ispfpga.
+loading NP_PATTERN_MANAGER
+
+end NP_PATTERN_MANAGER
+
+Package Status:                     Final          Version 1.26
+Running general design DRC...
+Removing unused logic...
+Optimizing...
+
+
+
+Design Summary:
+   Number of PFU registers:    24
+   Number of SLICEs:            21 out of  1140 (2%)
+      SLICEs(logic/ROM):        21 out of   900 (2%)
+      SLICEs(logic/ROM/RAM):     0 out of   240 (0%)
+          As RAM:            0
+          As Logic/ROM:      0
+   Number of logic LUT4s:      17
+   Number of distributed RAM:   0 (0 LUT4s)
+   Number of ripple logic:     12 (24 LUT4s)
+   Number of shift registers:   0
+   Total number of LUT4s:      41
+   Number of external PIOs: 5 out of 211 (2%)
+   Number of PLLs:  0 out of 2 (0%)
+   Number of block RAMs:  0 out of 3 (0%)
+   Number of GSRs:  0 out of 1 (0%)
+   JTAG used :      No
+   Readback used :  No
+   Oscillator used :  Yes
+   Startup used :   No
+   Number of TSALL: 0 out of 1 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and ripple logic.
+   Number of clocks:  2
+     Net clk: 7 loads, 7 rising, 0 falling (Driver: oscc_0 )
+     Net CONTORLLINES/h_counter_0: 7 loads, 0 rising, 7 falling (Driver: CONTORLLINES/h_counter_75__i0 )
+   Number of Clock Enables:  2
+     Net CONTORLLINES/v_counter_1: 1 loads, 1 LSLICEs
+     Net CONTORLLINES/h_counter_4: 1 loads, 1 LSLICEs
+   Number of LSRs:  4
+     Net CONTORLLINES/n156: 6 loads, 6 LSLICEs
+     Net CONTORLLINES/n362: 1 loads, 1 LSLICEs
+     Net CONTORLLINES/n157: 6 loads, 6 LSLICEs
+     Net CONTORLLINES/n202: 1 loads, 1 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net CONTORLLINES/n156: 6 loads
+     Net CONTORLLINES/n157: 6 loads
+     Net CONTORLLINES/h_counter_4: 4 loads
+     Net CONTORLLINES/h_counter_7: 4 loads
+     Net CONTORLLINES/v_counter_1: 4 loads
+     Net CONTORLLINES/v_counter_9: 4 loads
+     Net CONTORLLINES/h_counter_5: 3 loads
+     Net CONTORLLINES/h_counter_8: 3 loads
+     Net CONTORLLINES/h_counter_9: 3 loads
+     Net CONTORLLINES/v_counter_4: 3 loads
+ 
+   Number of warnings:  0
+   Number of errors:    0
+
+
+Total CPU Time: 0 secs  
+Total REAL Time: 0 secs  
+Peak Memory Usage: 33 MB
+
+Dumping design to file eece444_vga_videocard_eece444_vga_videocard_map.ncd.
+
+mpartrce -p "eece444_vga_videocard_eece444_vga_videocard.p2t" -f "eece444_vga_videocard_eece444_vga_videocard.p3t" -tf "eece444_vga_videocard_eece444_vga_videocard.pt" "eece444_vga_videocard_eece444_vga_videocard_map.ncd" "eece444_vga_videocard_eece444_vga_videocard.ncd"
+
+---- MParTrce Tool ----
+Removing old design directory at request of -rem command line option to this program.
+Running par. Please wait . . .
+
+Lattice Place and Route Report for Design "eece444_vga_videocard_eece444_vga_videocard_map.ncd"
+Sun Mar 10 19:53:14 2013
+
+PAR: Place And Route Diamond (64-bit) 2.1.0.103.
+Command Line: par -w -l 5 -i 6 -t 1 -c 0 -e 0 -exp parUseNBR=1:parCDP=0:parCDR=0:parPathBased=OFF eece444_vga_videocard_eece444_vga_videocard_map.ncd eece444_vga_videocard_eece444_vga_videocard.dir/5_1.ncd eece444_vga_videocard_eece444_vga_videocard.prf
+Preference file: eece444_vga_videocard_eece444_vga_videocard.prf.
+Placement level-cost: 5-1.
+Routing Iterations: 6
+
+Loading design for application par from file eece444_vga_videocard_eece444_vga_videocard_map.ncd.
+Design name: Top
+NCD version: 3.2
+Vendor:      LATTICE
+Device:      LCMXO2280C
+Package:     FTBGA256
+Performance: 3
+Loading device for application par from file 'mj5g21x17.nph' in environment C:/lscc/diamond/2.1_x64/ispfpga.
+loading NP_PATTERN_MANAGER
+
+end NP_PATTERN_MANAGER
+
+Package Status:                     Final          Version 1.26
+Performance Hardware Data Status: Version 1.75
+License checked out.
+
+
+Ignore Preference Error(s):  True
+Device utilization summary:
+
+   OSC                1/1           100% used
+   PIO (prelim)       5/271           1% used
+                      5/211           2% bonded
+   SLICE             21/1140          1% used
+
+
+
+Number of Signals: 51
+Number of Connections: 118
+
+Pin Constraint Summary:
+   5 out of 5 pins locked (100% locked).
+
+No signal is selected as primary clock.
+
+The following 2 signals are selected to use the secondary clock routing resources:
+    clk (driver: oscc_0, clk load #: 7, sr load #: 0, ce load #: 0)
+    CONTORLLINES/h_counter_0 (driver: CONTORLLINES/SLICE_11, clk load #: 7, sr load #: 0, ce load #: 0)
+
+No signal is selected as Global Set/Reset.
+Starting Placer Phase 0.
+
+Finished Placer Phase 0.  REAL time: 0 secs 
+
+Starting Placer Phase 1.
+.............
+Placer score = 53672.
+Finished Placer Phase 1.  REAL time: 2 secs 
+
+Starting Placer Phase 2.
+.
+Placer score =  53667
+Finished Placer Phase 2.  REAL time: 2 secs 
+
+
+------------------ Clock Report ------------------
+
+Global Clock Resources:
+  CLK_PIN    : 0 out of 4 (0%)
+  PLL        : 0 out of 2 (0%)
+
+Quadrants All (TL, TR, BL, BR) - Global Clocks:
+  SECONDARY "clk" from comp "oscc_0" on site "OSC", clk load = 7, ce load = 0, sr load = 0
+  SECONDARY "CONTORLLINES/h_counter_0" from Q0 on comp "CONTORLLINES/SLICE_11" on site "R13C2A", clk load = 7, ce load = 0, sr load = 0
+
+  PRIMARY  : 0 out of 4 (0%)
+  SECONDARY: 2 out of 4 (50%)
+
+--------------- End of Clock Report ---------------
+
+
+I/O Usage Summary (final):
+   5 out of 271 (1.8%) PIO sites used.
+   5 out of 211 (2.4%) bonded PIO sites used.
+   Number of PIO comps: 5; differential: 0
+   Number of Vref pins used: 0
+
+I/O Bank Usage Summary:
++----------+---------------+------------+------------+------------+
+| I/O Bank | Usage         | Bank Vccio | Bank Vref1 | Bank Vref2 |
++----------+---------------+------------+------------+------------+
+| 0        | 0 / 24 (  0%) | -          | -          | -          |
+| 1        | 0 / 30 (  0%) | -          | -          | -          |
+| 2        | 0 / 26 (  0%) | -          | -          | -          |
+| 3        | 0 / 28 (  0%) | -          | -          | -          |
+| 4        | 0 / 29 (  0%) | -          | -          | -          |
+| 5        | 0 / 20 (  0%) | -          | -          | -          |
+| 6        | 2 / 28 (  7%) | 3.3V       | -          | -          |
+| 7        | 3 / 26 ( 11%) | 3.3V       | -          | -          |
++----------+---------------+------------+------------+------------+
+
+Total placer CPU time: 1 secs 
+
+Dumping design to file eece444_vga_videocard_eece444_vga_videocard.dir/5_1.ncd.
+
+0 connections routed; 118 unrouted.
+Starting router resource preassignment
+
+Completed router resource preassignment. Real time: 3 secs 
+
+Start NBR router at 19:53:17 03/10/13
+
+*****************************************************************
+Info: NBR allows conflicts(one node used by more than one signal)
+      in the earlier iterations. In each iteration, it tries to  
+      solve the conflicts while keeping the critical connections 
+      routed as short as possible. The routing process is said to
+      be completed when no conflicts exist and all connections   
+      are routed.                                                
+Note: NBR uses a different method to calculate timing slacks. The
+      worst slack and total negative slack may not be the same as
+      that in TRCE report. You should always run TRCE to verify  
+      your design. Thanks.                                       
+*****************************************************************
+
+Start NBR special constraint process at 19:53:17 03/10/13
+
+Start NBR section for initial routing
+Level 4, iteration 1
+1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack: 31.478ns/0.000ns; real time: 3 secs 
+Info: Initial congestion level at 75% usage is 0
+Info: Initial congestion area  at 75% usage is 0 (0.00%)
+
+Start NBR section for normal routing
+Level 4, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack: 31.478ns/0.000ns; real time: 3 secs 
+
+Start NBR section for re-routing
+Level 4, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack: 31.478ns/0.000ns; real time: 3 secs 
+
+Start NBR section for post-routing
+
+End NBR router with 0 unrouted connection
+
+NBR Summary
+-----------
+  Number of unrouted connections : 0 (0.00%)
+  Number of connections with timing violations : 0 (0.00%)
+  Estimated worst slack : 31.478ns
+  Timing score : 0
+-----------
+Notes: The timing info is calculated for SETUP only and all PAR_ADJs are ignored.
+
+
+
+Hold time optimization iteration 0:
+All hold time violations have been successfully corrected in speed grade M
+
+---------------IO Configurable Delay Element Usage Summary---------------
+
+Total IO Configurable Delay Elements used: 0 
+---------------End of IO Configurable Delay Element Usage Summary--------
+
+Total CPU time 2 secs 
+Total REAL time: 3 secs 
+Completely routed.
+End of route.  118 routed (100.00%); 0 unrouted.
+Checking DRC ... 
+No errors found.
+
+Hold time timing score: 0, hold timing errors: 0
+
+Timing score: 0 
+
+Dumping design to file eece444_vga_videocard_eece444_vga_videocard.dir/5_1.ncd.
+
+
+PAR_SUMMARY::Run status = completed
+PAR_SUMMARY::Number of unrouted conns = 0
+PAR_SUMMARY::Worst  slack<setup/<ns>> = 31.478
+PAR_SUMMARY::Timing score<setup/<ns>> = 0.000
+PAR_SUMMARY::Worst  slack<hold /<ns>> = 0.296
+PAR_SUMMARY::Timing score<hold /<ns>> = 0.000
+
+Total CPU  time to completion: 2 secs 
+Total REAL time to completion: 3 secs 
+
+par done!
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2012 Lattice Semiconductor Corporation,  All rights reserved.
+Exiting par with exit code 0
+Exiting mpartrce with exit code 0
+
+bitgen -w "eece444_vga_videocard_eece444_vga_videocard.ncd" -f "eece444_vga_videocard_eece444_vga_videocard.t2b" "eece444_vga_videocard_eece444_vga_videocard.prf"
+
+
+BITGEN: Bitstream Generator Diamond (64-bit) 2.1.0.103
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2012 Lattice Semiconductor Corporation,  All rights reserved.
+
+
+Loading design for application Bitgen from file eece444_vga_videocard_eece444_vga_videocard.ncd.
+Design name: Top
+NCD version: 3.2
+Vendor:      LATTICE
+Device:      LCMXO2280C
+Package:     FTBGA256
+Performance: 3
+Loading device for application Bitgen from file 'mj5g21x17.nph' in environment C:/lscc/diamond/2.1_x64/ispfpga.
+loading NP_PATTERN_MANAGER
+
+end NP_PATTERN_MANAGER
+
+Package Status:                     Final          Version 1.26
+Performance Hardware Data Status: Version 1.75
+
+Running DRC.
+DRC detected 0 errors and 0 warnings.
+Reading Preference File from eece444_vga_videocard_eece444_vga_videocard.prf...
+
+Preference Summary:
++---------------------------------+---------------------------------+
+|  Preference                     |  Current Setting                |
++---------------------------------+---------------------------------+
+|                  CONFIG_SECURE  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                          INBUF  |                           ON**  |
++---------------------------------+---------------------------------+
+|                             ES  |                           No**  |
++---------------------------------+---------------------------------+
+ *  Default setting.
+ ** The specified setting matches the default setting.
+
+
+Creating bit map...
+Saving bit stream in "eece444_vga_videocard_eece444_vga_videocard.bit".
+
+ispdfw -dev LCMXO2280C-XXFT256 -if "eece444_vga_videocard_eece444_vga_videocard.bit" -oft -jed -of "eece444_vga_videocard_eece444_vga_videocard.jed"  -comment "eece444_vga_videocard_eece444_vga_videocard.alt"
+
+Device Info:
+Full name: LCMXO2280C
+Row Width: 1116
+Column Width: 436
+Usercode bit #: 32
+Processing BIT2JED...
+
+Input: eece444_vga_videocard_eece444_vga_videocard.bit
+Output: eece444_vga_videocard_eece444_vga_videocard.jed
+Overwriteues: 0
+Comment file: eece444_vga_videocard_eece444_vga_videocard.alt
+Lever: 0
++-------------+
+|   Succeed!  |
++-------------+

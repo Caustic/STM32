@@ -1,0 +1,280 @@
+--------------------------------------------------------------------------------
+Lattice Synthesis Timing Report, Version  
+Sun Mar 10 19:51:37 2013
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2012 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Design:     Top
+Constraint file:  
+Report level:    verbose report, limited to 3 items per constraint
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk1 [get_nets clk]
+            170 items scored, 92 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 1.864ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3IX    CK             \CONTORLLINES/h_counter_75__i9  (from oscc_0 +)
+   Destination:    FD1P3IX    CD             \CONTORLLINES/H_SYNC_26  (to oscc_0 +)
+
+   Delay:                   6.682ns  (36.1% logic, 63.9% route), 6 logic levels.
+
+ Constraint Details:
+
+      6.682ns data_path \CONTORLLINES/h_counter_75__i9 to \CONTORLLINES/H_SYNC_26 violates
+      5.000ns delay constraint less
+      0.182ns L_S requirement (totaling 4.818ns) by 1.864ns
+
+ Path Details: \CONTORLLINES/h_counter_75__i9 to \CONTORLLINES/H_SYNC_26
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.613             CK to Q              \CONTORLLINES/h_counter_75__i9 (from oscc_0)
+Route         3   e 1.003                                  \CONTORLLINES/h_counter[9]
+LUT4        ---     0.390              A to Z              \CONTORLLINES/i3_4_lut
+Route         2   e 0.786                                  \CONTORLLINES/n382
+LUT4        ---     0.390              B to Z              \CONTORLLINES/i1_2_lut
+Route         1   e 0.620                                  \CONTORLLINES/n384
+MUXL5       ---     0.240           BLUT to Z              \CONTORLLINES/i17
+Route         1   e 0.620                                  \CONTORLLINES/n17
+LUT4        ---     0.390              C to Z              \CONTORLLINES/i3_3_lut_adj_1
+Route         1   e 0.620                                  \CONTORLLINES/n8_adj_1
+LUT4        ---     0.390              D to Z              \CONTORLLINES/i149_4_lut
+Route         1   e 0.620                                  \CONTORLLINES/n202
+                  --------
+                    6.682  (36.1% logic, 63.9% route), 6 logic levels.
+
+
+Error:  The following path violates requirements by 1.864ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3IX    CK             \CONTORLLINES/h_counter_75__i3  (from oscc_0 +)
+   Destination:    FD1P3IX    CD             \CONTORLLINES/H_SYNC_26  (to oscc_0 +)
+
+   Delay:                   6.682ns  (36.1% logic, 63.9% route), 6 logic levels.
+
+ Constraint Details:
+
+      6.682ns data_path \CONTORLLINES/h_counter_75__i3 to \CONTORLLINES/H_SYNC_26 violates
+      5.000ns delay constraint less
+      0.182ns L_S requirement (totaling 4.818ns) by 1.864ns
+
+ Path Details: \CONTORLLINES/h_counter_75__i3 to \CONTORLLINES/H_SYNC_26
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.613             CK to Q              \CONTORLLINES/h_counter_75__i3 (from oscc_0)
+Route         3   e 1.003                                  \CONTORLLINES/h_counter[3]
+LUT4        ---     0.390              C to Z              \CONTORLLINES/i3_4_lut
+Route         2   e 0.786                                  \CONTORLLINES/n382
+LUT4        ---     0.390              B to Z              \CONTORLLINES/i1_2_lut
+Route         1   e 0.620                                  \CONTORLLINES/n384
+MUXL5       ---     0.240           BLUT to Z              \CONTORLLINES/i17
+Route         1   e 0.620                                  \CONTORLLINES/n17
+LUT4        ---     0.390              C to Z              \CONTORLLINES/i3_3_lut_adj_1
+Route         1   e 0.620                                  \CONTORLLINES/n8_adj_1
+LUT4        ---     0.390              D to Z              \CONTORLLINES/i149_4_lut
+Route         1   e 0.620                                  \CONTORLLINES/n202
+                  --------
+                    6.682  (36.1% logic, 63.9% route), 6 logic levels.
+
+
+Error:  The following path violates requirements by 1.864ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3IX    CK             \CONTORLLINES/h_counter_75__i2  (from oscc_0 +)
+   Destination:    FD1P3IX    CD             \CONTORLLINES/H_SYNC_26  (to oscc_0 +)
+
+   Delay:                   6.682ns  (36.1% logic, 63.9% route), 6 logic levels.
+
+ Constraint Details:
+
+      6.682ns data_path \CONTORLLINES/h_counter_75__i2 to \CONTORLLINES/H_SYNC_26 violates
+      5.000ns delay constraint less
+      0.182ns L_S requirement (totaling 4.818ns) by 1.864ns
+
+ Path Details: \CONTORLLINES/h_counter_75__i2 to \CONTORLLINES/H_SYNC_26
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.613             CK to Q              \CONTORLLINES/h_counter_75__i2 (from oscc_0)
+Route         3   e 1.003                                  \CONTORLLINES/h_counter[2]
+LUT4        ---     0.390              B to Z              \CONTORLLINES/i3_4_lut
+Route         2   e 0.786                                  \CONTORLLINES/n382
+LUT4        ---     0.390              B to Z              \CONTORLLINES/i1_2_lut
+Route         1   e 0.620                                  \CONTORLLINES/n384
+MUXL5       ---     0.240           BLUT to Z              \CONTORLLINES/i17
+Route         1   e 0.620                                  \CONTORLLINES/n17
+LUT4        ---     0.390              C to Z              \CONTORLLINES/i3_3_lut_adj_1
+Route         1   e 0.620                                  \CONTORLLINES/n8_adj_1
+LUT4        ---     0.390              D to Z              \CONTORLLINES/i149_4_lut
+Route         1   e 0.620                                  \CONTORLLINES/n202
+                  --------
+                    6.682  (36.1% logic, 63.9% route), 6 logic levels.
+
+Warning: 6.864 ns is the maximum delay for this constraint.
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk0 [get_nets \CONTORLLINES/h_counter[0]]
+            155 items scored, 66 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 0.472ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3IX    CK             \CONTORLLINES/v_counter_76__i0  (from \CONTORLLINES/h_counter_75__i0 +)
+   Destination:    FD1S3IX    CD             \CONTORLLINES/v_counter_76__i1  (to \CONTORLLINES/h_counter_75__i0 -)
+
+   Delay:                   5.290ns  (33.7% logic, 66.3% route), 4 logic levels.
+
+ Constraint Details:
+
+      5.290ns data_path \CONTORLLINES/v_counter_76__i0 to \CONTORLLINES/v_counter_76__i1 violates
+      5.000ns delay constraint less
+      0.182ns L_S requirement (totaling 4.818ns) by 0.472ns
+
+ Path Details: \CONTORLLINES/v_counter_76__i0 to \CONTORLLINES/v_counter_76__i1
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.613             CK to Q              \CONTORLLINES/v_counter_76__i0 (from \CONTORLLINES/h_counter_75__i0)
+Route         2   e 0.906                                  \CONTORLLINES/v_counter[0]
+LUT4        ---     0.390              D to Z              \CONTORLLINES/i6_4_lut
+Route         1   e 0.620                                  \CONTORLLINES/n14
+LUT4        ---     0.390              B to Z              \CONTORLLINES/i7_4_lut
+Route         2   e 0.786                                  \CONTORLLINES/n385
+LUT4        ---     0.390              C to Z              \CONTORLLINES/i339_3_lut_4_lut
+Route        11   e 1.195                                  \CONTORLLINES/n157
+                  --------
+                    5.290  (33.7% logic, 66.3% route), 4 logic levels.
+
+
+Error:  The following path violates requirements by 0.472ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3IX    CK             \CONTORLLINES/v_counter_76__i0  (from \CONTORLLINES/h_counter_75__i0 +)
+   Destination:    FD1S3IX    CD             \CONTORLLINES/v_counter_76__i0  (to \CONTORLLINES/h_counter_75__i0 -)
+
+   Delay:                   5.290ns  (33.7% logic, 66.3% route), 4 logic levels.
+
+ Constraint Details:
+
+      5.290ns data_path \CONTORLLINES/v_counter_76__i0 to \CONTORLLINES/v_counter_76__i0 violates
+      5.000ns delay constraint less
+      0.182ns L_S requirement (totaling 4.818ns) by 0.472ns
+
+ Path Details: \CONTORLLINES/v_counter_76__i0 to \CONTORLLINES/v_counter_76__i0
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.613             CK to Q              \CONTORLLINES/v_counter_76__i0 (from \CONTORLLINES/h_counter_75__i0)
+Route         2   e 0.906                                  \CONTORLLINES/v_counter[0]
+LUT4        ---     0.390              D to Z              \CONTORLLINES/i6_4_lut
+Route         1   e 0.620                                  \CONTORLLINES/n14
+LUT4        ---     0.390              B to Z              \CONTORLLINES/i7_4_lut
+Route         2   e 0.786                                  \CONTORLLINES/n385
+LUT4        ---     0.390              C to Z              \CONTORLLINES/i339_3_lut_4_lut
+Route        11   e 1.195                                  \CONTORLLINES/n157
+                  --------
+                    5.290  (33.7% logic, 66.3% route), 4 logic levels.
+
+
+Error:  The following path violates requirements by 0.472ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3IX    CK             \CONTORLLINES/v_counter_76__i0  (from \CONTORLLINES/h_counter_75__i0 +)
+   Destination:    FD1S3IX    CD             \CONTORLLINES/v_counter_76__i10  (to \CONTORLLINES/h_counter_75__i0 -)
+
+   Delay:                   5.290ns  (33.7% logic, 66.3% route), 4 logic levels.
+
+ Constraint Details:
+
+      5.290ns data_path \CONTORLLINES/v_counter_76__i0 to \CONTORLLINES/v_counter_76__i10 violates
+      5.000ns delay constraint less
+      0.182ns L_S requirement (totaling 4.818ns) by 0.472ns
+
+ Path Details: \CONTORLLINES/v_counter_76__i0 to \CONTORLLINES/v_counter_76__i10
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.613             CK to Q              \CONTORLLINES/v_counter_76__i0 (from \CONTORLLINES/h_counter_75__i0)
+Route         2   e 0.906                                  \CONTORLLINES/v_counter[0]
+LUT4        ---     0.390              D to Z              \CONTORLLINES/i6_4_lut
+Route         1   e 0.620                                  \CONTORLLINES/n14
+LUT4        ---     0.390              B to Z              \CONTORLLINES/i7_4_lut
+Route         2   e 0.786                                  \CONTORLLINES/n385
+LUT4        ---     0.390              C to Z              \CONTORLLINES/i339_3_lut_4_lut
+Route        11   e 1.195                                  \CONTORLLINES/n157
+                  --------
+                    5.290  (33.7% logic, 66.3% route), 4 logic levels.
+
+Warning: 5.472 ns is the maximum delay for this constraint.
+
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk1 [get_nets clk]                     |     5.000 ns|     6.864 ns|     6 *
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets                          |             |             |
+\CONTORLLINES/h_counter[0]]             |     5.000 ns|     5.472 ns|     4 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+2 constraints not met.
+
+--------------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+--------------------------------------------------------------------------------
+\CONTORLLINES/n177                      |       2|      82|     51.90%
+                                        |        |        |
+\CONTORLLINES/n156                      |      11|      77|     48.73%
+                                        |        |        |
+\CONTORLLINES/n157                      |      11|      66|     41.77%
+                                        |        |        |
+\CONTORLLINES/n385                      |       2|      66|     41.77%
+                                        |        |        |
+\CONTORLLINES/n8                        |       1|      60|     37.97%
+                                        |        |        |
+\CONTORLLINES/n382                      |       2|      52|     32.91%
+                                        |        |        |
+\CONTORLLINES/n14                       |       1|      44|     27.85%
+                                        |        |        |
+\CONTORLLINES/n10                       |       1|      22|     13.92%
+                                        |        |        |
+\CONTORLLINES/n38                       |       1|      22|     13.92%
+                                        |        |        |
+--------------------------------------------------------------------------------
+
+
+Timing summary:
+---------------
+
+Timing errors: 158  Score: 145953
+
+Constraints cover  325 paths, 64 nets, and 151 connections (98.7% coverage)
+
+
+Peak memory: 57450496 bytes, TRCE: 1392640 bytes, DLYMAN: 0 bytes
+CPU_TIME_REPORT: 0 secs 

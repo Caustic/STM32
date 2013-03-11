@@ -1,0 +1,934 @@
+
+// Verilog netlist produced by program ldbanno, Version Diamond (64-bit) 2.1.0.103
+
+// ldbanno -n Verilog -o eece444_vga_videocard_eece444_vga_videocard_mapvo.vo -w -neg eece444_vga_videocard_eece444_vga_videocard_map.ncd 
+// Netlist created on Sun Mar 10 19:37:09 2013
+// Netlist written on Sun Mar 10 19:37:10 2013
+// Design is for device LCMXO2280C
+// Design is for package FTBGA256
+// Design is for performance grade 3
+
+`timescale 1 ns / 1 ps
+
+module Top ( RESET, H_SYNC, V_SYNC, RED, BLUE, GREEN );
+  input  RESET;
+  output H_SYNC, V_SYNC, RED, BLUE, GREEN;
+  wire   \CONTORLLINES/h_counter_9 , \CONTORLLINES/h_counter_8 , 
+         \CONTORLLINES/n156 , \CONTORLLINES/clk , \CONTORLLINES/n339 , 
+         \CONTORLLINES/n340 , \CONTORLLINES/v_counter_10 , \CONTORLLINES/n157 , 
+         \CONTORLLINES/h_counter_0 , \CONTORLLINES/n345 , 
+         \CONTORLLINES/v_counter_9 , \CONTORLLINES/v_counter_8 , 
+         \CONTORLLINES/n344 , \CONTORLLINES/v_counter_7 , 
+         \CONTORLLINES/v_counter_6 , \CONTORLLINES/n343 , 
+         \CONTORLLINES/v_counter_5 , \CONTORLLINES/v_counter_4 , 
+         \CONTORLLINES/n342 , \CONTORLLINES/v_counter_3 , 
+         \CONTORLLINES/v_counter_2 , \CONTORLLINES/n341 , 
+         \CONTORLLINES/h_counter_7 , \CONTORLLINES/h_counter_6 , 
+         \CONTORLLINES/n338 , \CONTORLLINES/v_counter_1 , 
+         \CONTORLLINES/v_counter_0 , \CONTORLLINES/h_counter_10 , 
+         \CONTORLLINES/h_counter_5 , \CONTORLLINES/h_counter_4 , 
+         \CONTORLLINES/n337 , \CONTORLLINES/h_counter_3 , 
+         \CONTORLLINES/h_counter_2 , \CONTORLLINES/n336 , 
+         \CONTORLLINES/h_counter_1 , \CONTORLLINES/n202 , VCC_net, H_SYNC_c, 
+         \CONTORLLINES/n385 , \CONTORLLINES/n362 , V_SYNC_c, 
+         \CONTORLLINES/n389 , \CONTORLLINES/n382 , \CONTORLLINES/n17 , 
+         \CONTORLLINES/n8 , \CONTORLLINES/n38 , \CONTORLLINES/n177 , 
+         \CONTORLLINES/n10 , \CONTORLLINES/n14 , \CONTORLLINES/n8_adj_1 , 
+         \CONTORLLINES/n7 , VCCI, GNDI_TSALL;
+
+  CONTORLLINES_SLICE_0 \CONTORLLINES/SLICE_0 ( .A1(\CONTORLLINES/h_counter_9 ), 
+    .A0(\CONTORLLINES/h_counter_8 ), .LSR(\CONTORLLINES/n156 ), 
+    .CLK(\CONTORLLINES/clk ), .FCI(\CONTORLLINES/n339 ), 
+    .Q0(\CONTORLLINES/h_counter_8 ), .Q1(\CONTORLLINES/h_counter_9 ), 
+    .FCO(\CONTORLLINES/n340 ));
+  CONTORLLINES_SLICE_1 \CONTORLLINES/SLICE_1 ( 
+    .A0(\CONTORLLINES/v_counter_10 ), .LSR(\CONTORLLINES/n157 ), 
+    .CLK(\CONTORLLINES/h_counter_0 ), .FCI(\CONTORLLINES/n345 ), 
+    .Q0(\CONTORLLINES/v_counter_10 ));
+  CONTORLLINES_SLICE_2 \CONTORLLINES/SLICE_2 ( .A1(\CONTORLLINES/v_counter_9 ), 
+    .A0(\CONTORLLINES/v_counter_8 ), .LSR(\CONTORLLINES/n157 ), 
+    .CLK(\CONTORLLINES/h_counter_0 ), .FCI(\CONTORLLINES/n344 ), 
+    .Q0(\CONTORLLINES/v_counter_8 ), .Q1(\CONTORLLINES/v_counter_9 ), 
+    .FCO(\CONTORLLINES/n345 ));
+  CONTORLLINES_SLICE_3 \CONTORLLINES/SLICE_3 ( .A1(\CONTORLLINES/v_counter_7 ), 
+    .A0(\CONTORLLINES/v_counter_6 ), .LSR(\CONTORLLINES/n157 ), 
+    .CLK(\CONTORLLINES/h_counter_0 ), .FCI(\CONTORLLINES/n343 ), 
+    .Q0(\CONTORLLINES/v_counter_6 ), .Q1(\CONTORLLINES/v_counter_7 ), 
+    .FCO(\CONTORLLINES/n344 ));
+  CONTORLLINES_SLICE_4 \CONTORLLINES/SLICE_4 ( .A1(\CONTORLLINES/v_counter_5 ), 
+    .A0(\CONTORLLINES/v_counter_4 ), .LSR(\CONTORLLINES/n157 ), 
+    .CLK(\CONTORLLINES/h_counter_0 ), .FCI(\CONTORLLINES/n342 ), 
+    .Q0(\CONTORLLINES/v_counter_4 ), .Q1(\CONTORLLINES/v_counter_5 ), 
+    .FCO(\CONTORLLINES/n343 ));
+  CONTORLLINES_SLICE_5 \CONTORLLINES/SLICE_5 ( .A1(\CONTORLLINES/v_counter_3 ), 
+    .A0(\CONTORLLINES/v_counter_2 ), .LSR(\CONTORLLINES/n157 ), 
+    .CLK(\CONTORLLINES/h_counter_0 ), .FCI(\CONTORLLINES/n341 ), 
+    .Q0(\CONTORLLINES/v_counter_2 ), .Q1(\CONTORLLINES/v_counter_3 ), 
+    .FCO(\CONTORLLINES/n342 ));
+  CONTORLLINES_SLICE_6 \CONTORLLINES/SLICE_6 ( .A1(\CONTORLLINES/h_counter_7 ), 
+    .A0(\CONTORLLINES/h_counter_6 ), .LSR(\CONTORLLINES/n156 ), 
+    .CLK(\CONTORLLINES/clk ), .FCI(\CONTORLLINES/n338 ), 
+    .Q0(\CONTORLLINES/h_counter_6 ), .Q1(\CONTORLLINES/h_counter_7 ), 
+    .FCO(\CONTORLLINES/n339 ));
+  CONTORLLINES_SLICE_7 \CONTORLLINES/SLICE_7 ( .A1(\CONTORLLINES/v_counter_1 ), 
+    .A0(\CONTORLLINES/v_counter_0 ), .LSR(\CONTORLLINES/n157 ), 
+    .CLK(\CONTORLLINES/h_counter_0 ), .Q0(\CONTORLLINES/v_counter_0 ), 
+    .Q1(\CONTORLLINES/v_counter_1 ), .FCO(\CONTORLLINES/n341 ));
+  CONTORLLINES_SLICE_8 \CONTORLLINES/SLICE_8 ( 
+    .A0(\CONTORLLINES/h_counter_10 ), .LSR(\CONTORLLINES/n156 ), 
+    .CLK(\CONTORLLINES/clk ), .FCI(\CONTORLLINES/n340 ), 
+    .Q0(\CONTORLLINES/h_counter_10 ));
+  CONTORLLINES_SLICE_9 \CONTORLLINES/SLICE_9 ( .A1(\CONTORLLINES/h_counter_5 ), 
+    .A0(\CONTORLLINES/h_counter_4 ), .LSR(\CONTORLLINES/n156 ), 
+    .CLK(\CONTORLLINES/clk ), .FCI(\CONTORLLINES/n337 ), 
+    .Q0(\CONTORLLINES/h_counter_4 ), .Q1(\CONTORLLINES/h_counter_5 ), 
+    .FCO(\CONTORLLINES/n338 ));
+  CONTORLLINES_SLICE_10 \CONTORLLINES/SLICE_10 ( 
+    .A1(\CONTORLLINES/h_counter_3 ), .A0(\CONTORLLINES/h_counter_2 ), 
+    .LSR(\CONTORLLINES/n156 ), .CLK(\CONTORLLINES/clk ), 
+    .FCI(\CONTORLLINES/n336 ), .Q0(\CONTORLLINES/h_counter_2 ), 
+    .Q1(\CONTORLLINES/h_counter_3 ), .FCO(\CONTORLLINES/n337 ));
+  CONTORLLINES_SLICE_11 \CONTORLLINES/SLICE_11 ( 
+    .A1(\CONTORLLINES/h_counter_1 ), .A0(\CONTORLLINES/h_counter_0 ), 
+    .LSR(\CONTORLLINES/n156 ), .CLK(\CONTORLLINES/clk ), 
+    .Q0(\CONTORLLINES/h_counter_0 ), .Q1(\CONTORLLINES/h_counter_1 ), 
+    .FCO(\CONTORLLINES/n336 ));
+  SLICE_12 SLICE_12( .M0(\CONTORLLINES/h_counter_0 ), 
+    .CE(\CONTORLLINES/h_counter_4 ), .LSR(\CONTORLLINES/n202 ), 
+    .CLK(\CONTORLLINES/clk ), .F0(VCC_net), .Q0(H_SYNC_c));
+  CONTORLLINES_SLICE_13 \CONTORLLINES/SLICE_13 ( 
+    .B1(\CONTORLLINES/h_counter_2 ), .A1(\CONTORLLINES/h_counter_1 ), 
+    .D0(\CONTORLLINES/n385 ), .C0(\CONTORLLINES/v_counter_1 ), 
+    .B0(\CONTORLLINES/v_counter_9 ), .A0(\CONTORLLINES/v_counter_4 ), 
+    .M0(\CONTORLLINES/v_counter_9 ), .CE(\CONTORLLINES/v_counter_1 ), 
+    .LSR(\CONTORLLINES/n362 ), .CLK(\CONTORLLINES/h_counter_0 ), 
+    .F0(\CONTORLLINES/n362 ), .Q0(V_SYNC_c), .F1(\CONTORLLINES/n389 ));
+  CONTORLLINES_i17_SLICE_14 \CONTORLLINES/i17/SLICE_14 ( 
+    .D1(\CONTORLLINES/n389 ), .C1(\CONTORLLINES/h_counter_9 ), 
+    .B1(\CONTORLLINES/h_counter_3 ), .A1(\CONTORLLINES/h_counter_7 ), 
+    .B0(\CONTORLLINES/n382 ), .A0(\CONTORLLINES/h_counter_7 ), 
+    .M0(\CONTORLLINES/h_counter_0 ), .OFX0(\CONTORLLINES/n17 ));
+  CONTORLLINES_SLICE_15 \CONTORLLINES/SLICE_15 ( 
+    .D1(\CONTORLLINES/h_counter_1 ), .C1(\CONTORLLINES/h_counter_3 ), 
+    .B1(\CONTORLLINES/h_counter_2 ), .A1(\CONTORLLINES/h_counter_9 ), 
+    .C0(\CONTORLLINES/h_counter_0 ), .B0(\CONTORLLINES/h_counter_7 ), 
+    .A0(\CONTORLLINES/n382 ), .F0(\CONTORLLINES/n8 ), .F1(\CONTORLLINES/n382 ));
+  CONTORLLINES_SLICE_16 \CONTORLLINES/SLICE_16 ( 
+    .D1(\CONTORLLINES/h_counter_10 ), .C1(\CONTORLLINES/n8 ), 
+    .B1(\CONTORLLINES/n38 ), .A1(\CONTORLLINES/h_counter_6 ), 
+    .B0(\CONTORLLINES/h_counter_8 ), .A0(\CONTORLLINES/h_counter_5 ), 
+    .F0(\CONTORLLINES/n38 ), .F1(\CONTORLLINES/n177 ));
+  CONTORLLINES_SLICE_17 \CONTORLLINES/SLICE_17 ( 
+    .D1(\CONTORLLINES/v_counter_6 ), .C1(\CONTORLLINES/n10 ), 
+    .B1(\CONTORLLINES/n14 ), .A1(\CONTORLLINES/v_counter_7 ), 
+    .D0(\CONTORLLINES/v_counter_1 ), .C0(\CONTORLLINES/n385 ), 
+    .B0(\CONTORLLINES/v_counter_9 ), .A0(\CONTORLLINES/v_counter_4 ), 
+    .F0(\CONTORLLINES/n157 ), .F1(\CONTORLLINES/n385 ));
+  CONTORLLINES_SLICE_18 \CONTORLLINES/SLICE_18 ( .D1(\CONTORLLINES/n8_adj_1 ), 
+    .C1(\CONTORLLINES/h_counter_4 ), .B1(\CONTORLLINES/n7 ), 
+    .A1(\CONTORLLINES/n177 ), .C0(\CONTORLLINES/n17 ), 
+    .B0(\CONTORLLINES/h_counter_10 ), .A0(\CONTORLLINES/h_counter_5 ), 
+    .F0(\CONTORLLINES/n8_adj_1 ), .F1(\CONTORLLINES/n202 ));
+  CONTORLLINES_SLICE_19 \CONTORLLINES/SLICE_19 ( 
+    .B1(\CONTORLLINES/v_counter_10 ), .A1(\CONTORLLINES/v_counter_2 ), 
+    .D0(\CONTORLLINES/v_counter_0 ), .C0(\CONTORLLINES/v_counter_3 ), 
+    .B0(\CONTORLLINES/v_counter_5 ), .A0(\CONTORLLINES/v_counter_8 ), 
+    .F0(\CONTORLLINES/n14 ), .F1(\CONTORLLINES/n10 ));
+  CONTORLLINES_SLICE_20 \CONTORLLINES/SLICE_20 ( 
+    .B1(\CONTORLLINES/h_counter_6 ), .A1(\CONTORLLINES/h_counter_8 ), 
+    .B0(\CONTORLLINES/n177 ), .A0(\CONTORLLINES/h_counter_4 ), 
+    .F0(\CONTORLLINES/n156 ), .F1(\CONTORLLINES/n7 ));
+  RED RED_I( .PADDO(VCC_net), .RED(RED));
+  V_SYNC V_SYNC_I( .PADDO(V_SYNC_c), .V_SYNC(V_SYNC));
+  H_SYNC H_SYNC_I( .PADDO(H_SYNC_c), .H_SYNC(H_SYNC));
+  BLUE BLUE_I( .BLUE(BLUE));
+  GREEN GREEN_I( .GREEN(GREEN));
+  CONTORLLINES_oscc_0 \CONTORLLINES/oscc_0 ( .CFGCLK(\CONTORLLINES/clk ));
+  VHI VHI_INST( .Z(VCCI));
+  PUR PUR_INST( .PUR(VCC_net));
+  GSR GSR_INST( .GSR(VCCI));
+  VLO VLO_INST( .Z(GNDI_TSALL));
+  TSALL TSALL_INST( .TSALL(GNDI_TSALL));
+endmodule
+
+module CONTORLLINES_SLICE_0 ( input A1, A0, LSR, CLK, FCI, output Q0, Q1, FCO );
+  wire   VCCI, \CONTORLLINES/SLICE_0/CONTORLLINES/h_counter_75_add_4_10_S1 , 
+         \CONTORLLINES/SLICE_0/CONTORLLINES/h_counter_75_add_4_10_S0 , GNDI, 
+         A1_dly, CLK_dly, A0_dly, LSR_dly, FCI_dly;
+
+  vmuxregsre \CONTORLLINES/h_counter_75__i9 ( .D0(VCCI), 
+    .D1(\CONTORLLINES/SLICE_0/CONTORLLINES/h_counter_75_add_4_10_S1 ), 
+    .SD(VCCI), .SP(VCCI), .CK(CLK_dly), .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  vmuxregsre \CONTORLLINES/h_counter_75__i8 ( .D0(VCCI), 
+    .D1(\CONTORLLINES/SLICE_0/CONTORLLINES/h_counter_75_add_4_10_S0 ), 
+    .SD(VCCI), .SP(VCCI), .CK(CLK_dly), .LSR(LSR_dly), .Q(Q0));
+  ccu2 \CONTORLLINES/h_counter_75_add_4_10 ( .A0(A0_dly), .B0(GNDI), .C0(GNDI), 
+    .D0(GNDI), .A1(A1_dly), .B1(GNDI), .C1(GNDI), .D1(GNDI), .CI(FCI_dly), 
+    .S0(\CONTORLLINES/SLICE_0/CONTORLLINES/h_counter_75_add_4_10_S0 ), 
+    .S1(\CONTORLLINES/SLICE_0/CONTORLLINES/h_counter_75_add_4_10_S1 ), .CO0(), 
+    .CO1(FCO));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (A1 => FCO) = (0:0:0,0:0:0);
+    (A0 => FCO) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    (FCI => FCO) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, A1, 0:0:0, 0:0:0,,,, CLK_dly, A1_dly);
+    $setuphold (posedge CLK, A0, 0:0:0, 0:0:0,,,, CLK_dly, A0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+    $setuphold (posedge CLK, FCI, 0:0:0, 0:0:0,,,, CLK_dly, FCI_dly);
+  endspecify
+
+endmodule
+
+module vmuxregsre ( input D0, D1, SD, SP, CK, LSR, output Q );
+
+  FL1P3IY INST01( .D0(D0), .D1(D1), .SP(SP), .CK(CK), .SD(SD), .CD(LSR), .Q(Q));
+  defparam INST01.GSR = "DISABLED";
+endmodule
+
+module vcc ( output PWR1 );
+
+  VHI INST1( .Z(PWR1));
+endmodule
+
+module ccu2 ( input A0, B0, C0, D0, A1, B1, C1, D1, CI, output S0, S1, CO0, 
+    CO1 );
+
+  CCU2 inst1( .CIN(CI), .A0(A0), .B0(B0), .C0(C0), .D0(D0), .A1(A1), .B1(B1), 
+    .C1(C1), .D1(D1), .S0(S0), .S1(S1), .COUT0(CO0), .COUT1(CO1));
+  defparam inst1.INIT0 = 16'hfaaa;
+  defparam inst1.INIT1 = 16'hfaaa;
+  defparam inst1.INJECT1_0 = "NO";
+  defparam inst1.INJECT1_1 = "NO";
+endmodule
+
+module gnd ( output PWR0 );
+
+  VLO INST1( .Z(PWR0));
+endmodule
+
+module CONTORLLINES_SLICE_1 ( input A0, LSR, CLK, FCI, output Q0 );
+  wire   VCCI, \CONTORLLINES/SLICE_1/CONTORLLINES/v_counter_76_add_4_12_S0 , 
+         CLK_NOTIN, GNDI, A0_dly, CLK_dly, LSR_dly, FCI_dly;
+
+  vmuxregsre \CONTORLLINES/v_counter_76__i10 ( .D0(VCCI), 
+    .D1(\CONTORLLINES/SLICE_1/CONTORLLINES/v_counter_76_add_4_12_S0 ), 
+    .SD(VCCI), .SP(VCCI), .CK(CLK_NOTIN), .LSR(LSR_dly), .Q(Q0));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  inverter CLK_INVERTERIN( .I(CLK_dly), .Z(CLK_NOTIN));
+  ccu20001 \CONTORLLINES/v_counter_76_add_4_12 ( .A0(A0_dly), .B0(GNDI), 
+    .C0(GNDI), .D0(GNDI), .A1(GNDI), .B1(GNDI), .C1(GNDI), .D1(GNDI), 
+    .CI(FCI_dly), 
+    .S0(\CONTORLLINES/SLICE_1/CONTORLLINES/v_counter_76_add_4_12_S0 ), .S1(), 
+    .CO0(), .CO1());
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (CLK => Q0) = (0:0:0,0:0:0);
+    $setuphold (negedge CLK, A0, 0:0:0, 0:0:0,,,, CLK_dly, A0_dly);
+    $setuphold (negedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+    $setuphold (negedge CLK, FCI, 0:0:0, 0:0:0,,,, CLK_dly, FCI_dly);
+  endspecify
+
+endmodule
+
+module inverter ( input I, output Z );
+
+  INV INST1( .A(I), .Z(Z));
+endmodule
+
+module ccu20001 ( input A0, B0, C0, D0, A1, B1, C1, D1, CI, output S0, S1, CO0, 
+    CO1 );
+
+  CCU2 inst1( .CIN(CI), .A0(A0), .B0(B0), .C0(C0), .D0(D0), .A1(A1), .B1(B1), 
+    .C1(C1), .D1(D1), .S0(S0), .S1(S1), .COUT0(CO0), .COUT1(CO1));
+  defparam inst1.INIT0 = 16'hfaaa;
+  defparam inst1.INIT1 = 16'h0000;
+  defparam inst1.INJECT1_0 = "NO";
+  defparam inst1.INJECT1_1 = "NO";
+endmodule
+
+module CONTORLLINES_SLICE_2 ( input A1, A0, LSR, CLK, FCI, output Q0, Q1, FCO );
+  wire   VCCI, \CONTORLLINES/SLICE_2/CONTORLLINES/v_counter_76_add_4_10_S1 , 
+         CLK_NOTIN, 
+         \CONTORLLINES/SLICE_2/CONTORLLINES/v_counter_76_add_4_10_S0 , GNDI, 
+         A1_dly, CLK_dly, A0_dly, LSR_dly, FCI_dly;
+
+  vmuxregsre \CONTORLLINES/v_counter_76__i9 ( .D0(VCCI), 
+    .D1(\CONTORLLINES/SLICE_2/CONTORLLINES/v_counter_76_add_4_10_S1 ), 
+    .SD(VCCI), .SP(VCCI), .CK(CLK_NOTIN), .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  inverter CLK_INVERTERIN( .I(CLK_dly), .Z(CLK_NOTIN));
+  vmuxregsre \CONTORLLINES/v_counter_76__i8 ( .D0(VCCI), 
+    .D1(\CONTORLLINES/SLICE_2/CONTORLLINES/v_counter_76_add_4_10_S0 ), 
+    .SD(VCCI), .SP(VCCI), .CK(CLK_NOTIN), .LSR(LSR_dly), .Q(Q0));
+  ccu2 \CONTORLLINES/v_counter_76_add_4_10 ( .A0(A0_dly), .B0(GNDI), .C0(GNDI), 
+    .D0(GNDI), .A1(A1_dly), .B1(GNDI), .C1(GNDI), .D1(GNDI), .CI(FCI_dly), 
+    .S0(\CONTORLLINES/SLICE_2/CONTORLLINES/v_counter_76_add_4_10_S0 ), 
+    .S1(\CONTORLLINES/SLICE_2/CONTORLLINES/v_counter_76_add_4_10_S1 ), .CO0(), 
+    .CO1(FCO));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (A1 => FCO) = (0:0:0,0:0:0);
+    (A0 => FCO) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    (FCI => FCO) = (0:0:0,0:0:0);
+    $setuphold (negedge CLK, A1, 0:0:0, 0:0:0,,,, CLK_dly, A1_dly);
+    $setuphold (negedge CLK, A0, 0:0:0, 0:0:0,,,, CLK_dly, A0_dly);
+    $setuphold (negedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+    $setuphold (negedge CLK, FCI, 0:0:0, 0:0:0,,,, CLK_dly, FCI_dly);
+  endspecify
+
+endmodule
+
+module CONTORLLINES_SLICE_3 ( input A1, A0, LSR, CLK, FCI, output Q0, Q1, FCO );
+  wire   VCCI, \CONTORLLINES/SLICE_3/CONTORLLINES/v_counter_76_add_4_8_S1 , 
+         CLK_NOTIN, 
+         \CONTORLLINES/SLICE_3/CONTORLLINES/v_counter_76_add_4_8_S0 , GNDI, 
+         A1_dly, CLK_dly, A0_dly, LSR_dly, FCI_dly;
+
+  vmuxregsre \CONTORLLINES/v_counter_76__i7 ( .D0(VCCI), 
+    .D1(\CONTORLLINES/SLICE_3/CONTORLLINES/v_counter_76_add_4_8_S1 ), 
+    .SD(VCCI), .SP(VCCI), .CK(CLK_NOTIN), .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  inverter CLK_INVERTERIN( .I(CLK_dly), .Z(CLK_NOTIN));
+  vmuxregsre \CONTORLLINES/v_counter_76__i6 ( .D0(VCCI), 
+    .D1(\CONTORLLINES/SLICE_3/CONTORLLINES/v_counter_76_add_4_8_S0 ), 
+    .SD(VCCI), .SP(VCCI), .CK(CLK_NOTIN), .LSR(LSR_dly), .Q(Q0));
+  ccu2 \CONTORLLINES/v_counter_76_add_4_8 ( .A0(A0_dly), .B0(GNDI), .C0(GNDI), 
+    .D0(GNDI), .A1(A1_dly), .B1(GNDI), .C1(GNDI), .D1(GNDI), .CI(FCI_dly), 
+    .S0(\CONTORLLINES/SLICE_3/CONTORLLINES/v_counter_76_add_4_8_S0 ), 
+    .S1(\CONTORLLINES/SLICE_3/CONTORLLINES/v_counter_76_add_4_8_S1 ), .CO0(), 
+    .CO1(FCO));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (A1 => FCO) = (0:0:0,0:0:0);
+    (A0 => FCO) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    (FCI => FCO) = (0:0:0,0:0:0);
+    $setuphold (negedge CLK, A1, 0:0:0, 0:0:0,,,, CLK_dly, A1_dly);
+    $setuphold (negedge CLK, A0, 0:0:0, 0:0:0,,,, CLK_dly, A0_dly);
+    $setuphold (negedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+    $setuphold (negedge CLK, FCI, 0:0:0, 0:0:0,,,, CLK_dly, FCI_dly);
+  endspecify
+
+endmodule
+
+module CONTORLLINES_SLICE_4 ( input A1, A0, LSR, CLK, FCI, output Q0, Q1, FCO );
+  wire   VCCI, \CONTORLLINES/SLICE_4/CONTORLLINES/v_counter_76_add_4_6_S1 , 
+         CLK_NOTIN, 
+         \CONTORLLINES/SLICE_4/CONTORLLINES/v_counter_76_add_4_6_S0 , GNDI, 
+         A1_dly, CLK_dly, A0_dly, LSR_dly, FCI_dly;
+
+  vmuxregsre \CONTORLLINES/v_counter_76__i5 ( .D0(VCCI), 
+    .D1(\CONTORLLINES/SLICE_4/CONTORLLINES/v_counter_76_add_4_6_S1 ), 
+    .SD(VCCI), .SP(VCCI), .CK(CLK_NOTIN), .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  inverter CLK_INVERTERIN( .I(CLK_dly), .Z(CLK_NOTIN));
+  vmuxregsre \CONTORLLINES/v_counter_76__i4 ( .D0(VCCI), 
+    .D1(\CONTORLLINES/SLICE_4/CONTORLLINES/v_counter_76_add_4_6_S0 ), 
+    .SD(VCCI), .SP(VCCI), .CK(CLK_NOTIN), .LSR(LSR_dly), .Q(Q0));
+  ccu2 \CONTORLLINES/v_counter_76_add_4_6 ( .A0(A0_dly), .B0(GNDI), .C0(GNDI), 
+    .D0(GNDI), .A1(A1_dly), .B1(GNDI), .C1(GNDI), .D1(GNDI), .CI(FCI_dly), 
+    .S0(\CONTORLLINES/SLICE_4/CONTORLLINES/v_counter_76_add_4_6_S0 ), 
+    .S1(\CONTORLLINES/SLICE_4/CONTORLLINES/v_counter_76_add_4_6_S1 ), .CO0(), 
+    .CO1(FCO));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (A1 => FCO) = (0:0:0,0:0:0);
+    (A0 => FCO) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    (FCI => FCO) = (0:0:0,0:0:0);
+    $setuphold (negedge CLK, A1, 0:0:0, 0:0:0,,,, CLK_dly, A1_dly);
+    $setuphold (negedge CLK, A0, 0:0:0, 0:0:0,,,, CLK_dly, A0_dly);
+    $setuphold (negedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+    $setuphold (negedge CLK, FCI, 0:0:0, 0:0:0,,,, CLK_dly, FCI_dly);
+  endspecify
+
+endmodule
+
+module CONTORLLINES_SLICE_5 ( input A1, A0, LSR, CLK, FCI, output Q0, Q1, FCO );
+  wire   VCCI, \CONTORLLINES/SLICE_5/CONTORLLINES/v_counter_76_add_4_4_S1 , 
+         CLK_NOTIN, 
+         \CONTORLLINES/SLICE_5/CONTORLLINES/v_counter_76_add_4_4_S0 , GNDI, 
+         A1_dly, CLK_dly, A0_dly, LSR_dly, FCI_dly;
+
+  vmuxregsre \CONTORLLINES/v_counter_76__i3 ( .D0(VCCI), 
+    .D1(\CONTORLLINES/SLICE_5/CONTORLLINES/v_counter_76_add_4_4_S1 ), 
+    .SD(VCCI), .SP(VCCI), .CK(CLK_NOTIN), .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  inverter CLK_INVERTERIN( .I(CLK_dly), .Z(CLK_NOTIN));
+  vmuxregsre \CONTORLLINES/v_counter_76__i2 ( .D0(VCCI), 
+    .D1(\CONTORLLINES/SLICE_5/CONTORLLINES/v_counter_76_add_4_4_S0 ), 
+    .SD(VCCI), .SP(VCCI), .CK(CLK_NOTIN), .LSR(LSR_dly), .Q(Q0));
+  ccu2 \CONTORLLINES/v_counter_76_add_4_4 ( .A0(A0_dly), .B0(GNDI), .C0(GNDI), 
+    .D0(GNDI), .A1(A1_dly), .B1(GNDI), .C1(GNDI), .D1(GNDI), .CI(FCI_dly), 
+    .S0(\CONTORLLINES/SLICE_5/CONTORLLINES/v_counter_76_add_4_4_S0 ), 
+    .S1(\CONTORLLINES/SLICE_5/CONTORLLINES/v_counter_76_add_4_4_S1 ), .CO0(), 
+    .CO1(FCO));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (A1 => FCO) = (0:0:0,0:0:0);
+    (A0 => FCO) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    (FCI => FCO) = (0:0:0,0:0:0);
+    $setuphold (negedge CLK, A1, 0:0:0, 0:0:0,,,, CLK_dly, A1_dly);
+    $setuphold (negedge CLK, A0, 0:0:0, 0:0:0,,,, CLK_dly, A0_dly);
+    $setuphold (negedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+    $setuphold (negedge CLK, FCI, 0:0:0, 0:0:0,,,, CLK_dly, FCI_dly);
+  endspecify
+
+endmodule
+
+module CONTORLLINES_SLICE_6 ( input A1, A0, LSR, CLK, FCI, output Q0, Q1, FCO );
+  wire   VCCI, \CONTORLLINES/SLICE_6/CONTORLLINES/h_counter_75_add_4_8_S1 , 
+         \CONTORLLINES/SLICE_6/CONTORLLINES/h_counter_75_add_4_8_S0 , GNDI, 
+         A1_dly, CLK_dly, A0_dly, LSR_dly, FCI_dly;
+
+  vmuxregsre \CONTORLLINES/h_counter_75__i7 ( .D0(VCCI), 
+    .D1(\CONTORLLINES/SLICE_6/CONTORLLINES/h_counter_75_add_4_8_S1 ), 
+    .SD(VCCI), .SP(VCCI), .CK(CLK_dly), .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  vmuxregsre \CONTORLLINES/h_counter_75__i6 ( .D0(VCCI), 
+    .D1(\CONTORLLINES/SLICE_6/CONTORLLINES/h_counter_75_add_4_8_S0 ), 
+    .SD(VCCI), .SP(VCCI), .CK(CLK_dly), .LSR(LSR_dly), .Q(Q0));
+  ccu2 \CONTORLLINES/h_counter_75_add_4_8 ( .A0(A0_dly), .B0(GNDI), .C0(GNDI), 
+    .D0(GNDI), .A1(A1_dly), .B1(GNDI), .C1(GNDI), .D1(GNDI), .CI(FCI_dly), 
+    .S0(\CONTORLLINES/SLICE_6/CONTORLLINES/h_counter_75_add_4_8_S0 ), 
+    .S1(\CONTORLLINES/SLICE_6/CONTORLLINES/h_counter_75_add_4_8_S1 ), .CO0(), 
+    .CO1(FCO));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (A1 => FCO) = (0:0:0,0:0:0);
+    (A0 => FCO) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    (FCI => FCO) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, A1, 0:0:0, 0:0:0,,,, CLK_dly, A1_dly);
+    $setuphold (posedge CLK, A0, 0:0:0, 0:0:0,,,, CLK_dly, A0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+    $setuphold (posedge CLK, FCI, 0:0:0, 0:0:0,,,, CLK_dly, FCI_dly);
+  endspecify
+
+endmodule
+
+module CONTORLLINES_SLICE_7 ( input A1, A0, LSR, CLK, output Q0, Q1, FCO );
+  wire   VCCI, \CONTORLLINES/SLICE_7/CONTORLLINES/v_counter_76_add_4_2_S1 , 
+         CLK_NOTIN, 
+         \CONTORLLINES/SLICE_7/CONTORLLINES/v_counter_76_add_4_2_S0 , GNDI, 
+         A1_dly, CLK_dly, A0_dly, LSR_dly;
+
+  vmuxregsre \CONTORLLINES/v_counter_76__i1 ( .D0(VCCI), 
+    .D1(\CONTORLLINES/SLICE_7/CONTORLLINES/v_counter_76_add_4_2_S1 ), 
+    .SD(VCCI), .SP(VCCI), .CK(CLK_NOTIN), .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  inverter CLK_INVERTERIN( .I(CLK_dly), .Z(CLK_NOTIN));
+  vmuxregsre \CONTORLLINES/v_counter_76__i0 ( .D0(VCCI), 
+    .D1(\CONTORLLINES/SLICE_7/CONTORLLINES/v_counter_76_add_4_2_S0 ), 
+    .SD(VCCI), .SP(VCCI), .CK(CLK_NOTIN), .LSR(LSR_dly), .Q(Q0));
+  ccu20002 \CONTORLLINES/v_counter_76_add_4_2 ( .A0(A0_dly), .B0(GNDI), 
+    .C0(GNDI), .D0(GNDI), .A1(A1_dly), .B1(GNDI), .C1(GNDI), .D1(GNDI), 
+    .CI(GNDI), 
+    .S0(\CONTORLLINES/SLICE_7/CONTORLLINES/v_counter_76_add_4_2_S0 ), 
+    .S1(\CONTORLLINES/SLICE_7/CONTORLLINES/v_counter_76_add_4_2_S1 ), .CO0(), 
+    .CO1(FCO));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (A1 => FCO) = (0:0:0,0:0:0);
+    (A0 => FCO) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (negedge CLK, A1, 0:0:0, 0:0:0,,,, CLK_dly, A1_dly);
+    $setuphold (negedge CLK, A0, 0:0:0, 0:0:0,,,, CLK_dly, A0_dly);
+    $setuphold (negedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module ccu20002 ( input A0, B0, C0, D0, A1, B1, C1, D1, CI, output S0, S1, CO0, 
+    CO1 );
+
+  CCU2 inst1( .CIN(CI), .A0(A0), .B0(B0), .C0(C0), .D0(D0), .A1(A1), .B1(B1), 
+    .C1(C1), .D1(D1), .S0(S0), .S1(S1), .COUT0(CO0), .COUT1(CO1));
+  defparam inst1.INIT0 = 16'h0555;
+  defparam inst1.INIT1 = 16'hfaaa;
+  defparam inst1.INJECT1_0 = "NO";
+  defparam inst1.INJECT1_1 = "NO";
+endmodule
+
+module CONTORLLINES_SLICE_8 ( input A0, LSR, CLK, FCI, output Q0 );
+  wire   VCCI, \CONTORLLINES/SLICE_8/CONTORLLINES/h_counter_75_add_4_12_S0 , 
+         GNDI, A0_dly, CLK_dly, LSR_dly, FCI_dly;
+
+  vmuxregsre \CONTORLLINES/h_counter_75__i10 ( .D0(VCCI), 
+    .D1(\CONTORLLINES/SLICE_8/CONTORLLINES/h_counter_75_add_4_12_S0 ), 
+    .SD(VCCI), .SP(VCCI), .CK(CLK_dly), .LSR(LSR_dly), .Q(Q0));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ccu20001 \CONTORLLINES/h_counter_75_add_4_12 ( .A0(A0_dly), .B0(GNDI), 
+    .C0(GNDI), .D0(GNDI), .A1(GNDI), .B1(GNDI), .C1(GNDI), .D1(GNDI), 
+    .CI(FCI_dly), 
+    .S0(\CONTORLLINES/SLICE_8/CONTORLLINES/h_counter_75_add_4_12_S0 ), .S1(), 
+    .CO0(), .CO1());
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (CLK => Q0) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, A0, 0:0:0, 0:0:0,,,, CLK_dly, A0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+    $setuphold (posedge CLK, FCI, 0:0:0, 0:0:0,,,, CLK_dly, FCI_dly);
+  endspecify
+
+endmodule
+
+module CONTORLLINES_SLICE_9 ( input A1, A0, LSR, CLK, FCI, output Q0, Q1, FCO );
+  wire   VCCI, \CONTORLLINES/SLICE_9/CONTORLLINES/h_counter_75_add_4_6_S1 , 
+         \CONTORLLINES/SLICE_9/CONTORLLINES/h_counter_75_add_4_6_S0 , GNDI, 
+         A1_dly, CLK_dly, A0_dly, LSR_dly, FCI_dly;
+
+  vmuxregsre \CONTORLLINES/h_counter_75__i5 ( .D0(VCCI), 
+    .D1(\CONTORLLINES/SLICE_9/CONTORLLINES/h_counter_75_add_4_6_S1 ), 
+    .SD(VCCI), .SP(VCCI), .CK(CLK_dly), .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  vmuxregsre \CONTORLLINES/h_counter_75__i4 ( .D0(VCCI), 
+    .D1(\CONTORLLINES/SLICE_9/CONTORLLINES/h_counter_75_add_4_6_S0 ), 
+    .SD(VCCI), .SP(VCCI), .CK(CLK_dly), .LSR(LSR_dly), .Q(Q0));
+  ccu2 \CONTORLLINES/h_counter_75_add_4_6 ( .A0(A0_dly), .B0(GNDI), .C0(GNDI), 
+    .D0(GNDI), .A1(A1_dly), .B1(GNDI), .C1(GNDI), .D1(GNDI), .CI(FCI_dly), 
+    .S0(\CONTORLLINES/SLICE_9/CONTORLLINES/h_counter_75_add_4_6_S0 ), 
+    .S1(\CONTORLLINES/SLICE_9/CONTORLLINES/h_counter_75_add_4_6_S1 ), .CO0(), 
+    .CO1(FCO));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (A1 => FCO) = (0:0:0,0:0:0);
+    (A0 => FCO) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    (FCI => FCO) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, A1, 0:0:0, 0:0:0,,,, CLK_dly, A1_dly);
+    $setuphold (posedge CLK, A0, 0:0:0, 0:0:0,,,, CLK_dly, A0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+    $setuphold (posedge CLK, FCI, 0:0:0, 0:0:0,,,, CLK_dly, FCI_dly);
+  endspecify
+
+endmodule
+
+module CONTORLLINES_SLICE_10 ( input A1, A0, LSR, CLK, FCI, output Q0, Q1, FCO );
+  wire   VCCI, \CONTORLLINES/SLICE_10/CONTORLLINES/h_counter_75_add_4_4_S1 , 
+         \CONTORLLINES/SLICE_10/CONTORLLINES/h_counter_75_add_4_4_S0 , GNDI, 
+         A1_dly, CLK_dly, A0_dly, LSR_dly, FCI_dly;
+
+  vmuxregsre \CONTORLLINES/h_counter_75__i3 ( .D0(VCCI), 
+    .D1(\CONTORLLINES/SLICE_10/CONTORLLINES/h_counter_75_add_4_4_S1 ), 
+    .SD(VCCI), .SP(VCCI), .CK(CLK_dly), .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  vmuxregsre \CONTORLLINES/h_counter_75__i2 ( .D0(VCCI), 
+    .D1(\CONTORLLINES/SLICE_10/CONTORLLINES/h_counter_75_add_4_4_S0 ), 
+    .SD(VCCI), .SP(VCCI), .CK(CLK_dly), .LSR(LSR_dly), .Q(Q0));
+  ccu2 \CONTORLLINES/h_counter_75_add_4_4 ( .A0(A0_dly), .B0(GNDI), .C0(GNDI), 
+    .D0(GNDI), .A1(A1_dly), .B1(GNDI), .C1(GNDI), .D1(GNDI), .CI(FCI_dly), 
+    .S0(\CONTORLLINES/SLICE_10/CONTORLLINES/h_counter_75_add_4_4_S0 ), 
+    .S1(\CONTORLLINES/SLICE_10/CONTORLLINES/h_counter_75_add_4_4_S1 ), .CO0(), 
+    .CO1(FCO));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (A1 => FCO) = (0:0:0,0:0:0);
+    (A0 => FCO) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    (FCI => FCO) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, A1, 0:0:0, 0:0:0,,,, CLK_dly, A1_dly);
+    $setuphold (posedge CLK, A0, 0:0:0, 0:0:0,,,, CLK_dly, A0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+    $setuphold (posedge CLK, FCI, 0:0:0, 0:0:0,,,, CLK_dly, FCI_dly);
+  endspecify
+
+endmodule
+
+module CONTORLLINES_SLICE_11 ( input A1, A0, LSR, CLK, output Q0, Q1, FCO );
+  wire   VCCI, \CONTORLLINES/SLICE_11/CONTORLLINES/h_counter_75_add_4_2_S1 , 
+         \CONTORLLINES/SLICE_11/CONTORLLINES/h_counter_75_add_4_2_S0 , GNDI, 
+         A1_dly, CLK_dly, A0_dly, LSR_dly;
+
+  vmuxregsre \CONTORLLINES/h_counter_75__i1 ( .D0(VCCI), 
+    .D1(\CONTORLLINES/SLICE_11/CONTORLLINES/h_counter_75_add_4_2_S1 ), 
+    .SD(VCCI), .SP(VCCI), .CK(CLK_dly), .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  vmuxregsre \CONTORLLINES/h_counter_75__i0 ( .D0(VCCI), 
+    .D1(\CONTORLLINES/SLICE_11/CONTORLLINES/h_counter_75_add_4_2_S0 ), 
+    .SD(VCCI), .SP(VCCI), .CK(CLK_dly), .LSR(LSR_dly), .Q(Q0));
+  ccu20002 \CONTORLLINES/h_counter_75_add_4_2 ( .A0(A0_dly), .B0(GNDI), 
+    .C0(GNDI), .D0(GNDI), .A1(A1_dly), .B1(GNDI), .C1(GNDI), .D1(GNDI), 
+    .CI(GNDI), 
+    .S0(\CONTORLLINES/SLICE_11/CONTORLLINES/h_counter_75_add_4_2_S0 ), 
+    .S1(\CONTORLLINES/SLICE_11/CONTORLLINES/h_counter_75_add_4_2_S1 ), .CO0(), 
+    .CO1(FCO));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (A1 => FCO) = (0:0:0,0:0:0);
+    (A0 => FCO) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, A1, 0:0:0, 0:0:0,,,, CLK_dly, A1_dly);
+    $setuphold (posedge CLK, A0, 0:0:0, 0:0:0,,,, CLK_dly, A0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module SLICE_12 ( input M0, CE, LSR, CLK, output F0, Q0 );
+  wire   GNDI, VCCI, M0_dly, CLK_dly, CE_dly, LSR_dly;
+
+  lut4 i2( .A(GNDI), .B(GNDI), .C(GNDI), .D(GNDI), .Z(F0));
+  gnd DRIVEGND( .PWR0(GNDI));
+  vmuxregsre \CONTORLLINES/H_SYNC_26 ( .D0(M0_dly), .D1(VCCI), .SD(GNDI), 
+    .SP(CE_dly), .CK(CLK_dly), .LSR(LSR_dly), .Q(Q0));
+  vcc DRIVEVCC( .PWR1(VCCI));
+
+  specify
+    (CLK => Q0) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, M0, 0:0:0, 0:0:0,,,, CLK_dly, M0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+    $width (posedge CLK, 0:0:0);
+    $width (negedge CLK, 0:0:0);
+  endspecify
+
+endmodule
+
+module lut4 ( input A, B, C, D, output Z );
+
+  ROM16X1 #(16'hFFFF) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module CONTORLLINES_SLICE_13 ( input B1, A1, D0, C0, B0, A0, M0, CE, LSR, CLK, 
+    output F0, Q0, F1 );
+  wire   GNDI, M0_NOTIN, VCCI, CLK_NOTIN, M0_dly, CLK_dly, CE_dly, LSR_dly;
+
+  lut40003 \CONTORLLINES/i330_2_lut ( .A(A1), .B(B1), .C(GNDI), .D(GNDI), 
+    .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40004 \CONTORLLINES/i1_4_lut_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), 
+    .Z(F0));
+  vmuxregsre \CONTORLLINES/V_SYNC_28 ( .D0(M0_NOTIN), .D1(VCCI), .SD(GNDI), 
+    .SP(CE_dly), .CK(CLK_NOTIN), .LSR(LSR_dly), .Q(Q0));
+  inverter M0_INVERTERIN( .I(M0_dly), .Z(M0_NOTIN));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  inverter CLK_INVERTERIN( .I(CLK_dly), .Z(CLK_NOTIN));
+
+  specify
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    $width (posedge CLK, 0:0:0);
+    $width (negedge CLK, 0:0:0);
+    $setuphold (negedge CLK, M0, 0:0:0, 0:0:0,,,, CLK_dly, M0_dly);
+    $setuphold (negedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+    $setuphold (negedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module lut40003 ( input A, B, C, D, output Z );
+
+  ROM16X1 #(16'h8888) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40004 ( input A, B, C, D, output Z );
+
+  ROM16X1 #(16'hFFA7) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module CONTORLLINES_i17_SLICE_14 ( input D1, C1, B1, A1, B0, A0, M0, output 
+    OFX0 );
+  wire   \CONTORLLINES/i17/SLICE_14/CONTORLLINES/i17/SLICE_14_K1_H1 , GNDI, 
+         \CONTORLLINES/i17/SLICE_14/CONTORLLINES/i17/GATE_H0 ;
+
+  lut40005 \CONTORLLINES/i17/SLICE_14_K1 ( .A(A1), .B(B1), .C(C1), .D(D1), 
+    .Z(\CONTORLLINES/i17/SLICE_14/CONTORLLINES/i17/SLICE_14_K1_H1 ));
+  lut40006 \CONTORLLINES/i17/GATE ( .A(A0), .B(B0), .C(GNDI), .D(GNDI), 
+    .Z(\CONTORLLINES/i17/SLICE_14/CONTORLLINES/i17/GATE_H0 ));
+  gnd DRIVEGND( .PWR0(GNDI));
+  selmux2 \CONTORLLINES/i17/SLICE_14_K0K1MUX ( 
+    .D0(\CONTORLLINES/i17/SLICE_14/CONTORLLINES/i17/GATE_H0 ), 
+    .D1(\CONTORLLINES/i17/SLICE_14/CONTORLLINES/i17/SLICE_14_K1_H1 ), .SD(M0), 
+    .Z(OFX0));
+
+  specify
+    (D1 => OFX0) = (0:0:0,0:0:0);
+    (C1 => OFX0) = (0:0:0,0:0:0);
+    (B1 => OFX0) = (0:0:0,0:0:0);
+    (A1 => OFX0) = (0:0:0,0:0:0);
+    (B0 => OFX0) = (0:0:0,0:0:0);
+    (A0 => OFX0) = (0:0:0,0:0:0);
+    (M0 => OFX0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40005 ( input A, B, C, D, output Z );
+
+  ROM16X1 #(16'hFBFF) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40006 ( input A, B, C, D, output Z );
+
+  ROM16X1 #(16'hDDDD) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module selmux2 ( input D0, D1, SD, output Z );
+
+  MUX21 INST1( .D0(D0), .D1(D1), .SD(SD), .Z(Z));
+endmodule
+
+module CONTORLLINES_SLICE_15 ( input D1, C1, B1, A1, C0, B0, A0, output F0, F1 );
+  wire   GNDI;
+
+  lut40007 \CONTORLLINES/i3_4_lut ( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40008 \CONTORLLINES/i3_3_lut ( .A(A0), .B(B0), .C(C0), .D(GNDI), .Z(F0));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40007 ( input A, B, C, D, output Z );
+
+  ROM16X1 #(16'hFFFD) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40008 ( input A, B, C, D, output Z );
+
+  ROM16X1 #(16'hFEFE) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module CONTORLLINES_SLICE_16 ( input D1, C1, B1, A1, B0, A0, output F0, F1 );
+  wire   GNDI;
+
+  lut40009 \CONTORLLINES/i1_4_lut ( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40003 \CONTORLLINES/i38_2_lut ( .A(A0), .B(B0), .C(GNDI), .D(GNDI), 
+    .Z(F0));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40009 ( input A, B, C, D, output Z );
+
+  ROM16X1 #(16'hFFFB) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module CONTORLLINES_SLICE_17 ( input D1, C1, B1, A1, D0, C0, B0, A0, output F0, 
+    F1 );
+
+  lut40010 \CONTORLLINES/i7_4_lut ( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40011 \CONTORLLINES/i339_3_lut_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), 
+    .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40010 ( input A, B, C, D, output Z );
+
+  ROM16X1 #(16'hFFFE) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40011 ( input A, B, C, D, output Z );
+
+  ROM16X1 #(16'h0008) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module CONTORLLINES_SLICE_18 ( input D1, C1, B1, A1, C0, B0, A0, output F0, F1 );
+  wire   GNDI;
+
+  lut40012 \CONTORLLINES/i149_4_lut ( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40008 \CONTORLLINES/i3_3_lut_adj_1 ( .A(A0), .B(B0), .C(C0), .D(GNDI), 
+    .Z(F0));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40012 ( input A, B, C, D, output Z );
+
+  ROM16X1 #(16'hFACA) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module CONTORLLINES_SLICE_19 ( input B1, A1, D0, C0, B0, A0, output F0, F1 );
+  wire   GNDI;
+
+  lut40013 \CONTORLLINES/i2_2_lut_adj_2 ( .A(A1), .B(B1), .C(GNDI), .D(GNDI), 
+    .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40010 \CONTORLLINES/i6_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40013 ( input A, B, C, D, output Z );
+
+  ROM16X1 #(16'hEEEE) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module CONTORLLINES_SLICE_20 ( input B1, A1, B0, A0, output F0, F1 );
+  wire   GNDI;
+
+  lut40014 \CONTORLLINES/i2_2_lut ( .A(A1), .B(B1), .C(GNDI), .D(GNDI), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40015 \CONTORLLINES/i337_2_lut ( .A(A0), .B(B0), .C(GNDI), .D(GNDI), 
+    .Z(F0));
+
+  specify
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40014 ( input A, B, C, D, output Z );
+
+  ROM16X1 #(16'hBBBB) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40015 ( input A, B, C, D, output Z );
+
+  ROM16X1 #(16'h1111) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module RED ( input PADDO, output RED );
+  wire   GNDI;
+
+  mjeiobuf RED_pad( .I(PADDO), .T(GNDI), .PAD(RED));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (PADDO => RED) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module mjeiobuf ( input I, T, output PAD );
+
+  OBZPU INST5( .I(I), .T(T), .O(PAD));
+endmodule
+
+module V_SYNC ( input PADDO, output V_SYNC );
+  wire   GNDI;
+
+  mjeiobuf V_SYNC_pad( .I(PADDO), .T(GNDI), .PAD(V_SYNC));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (PADDO => V_SYNC) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module H_SYNC ( input PADDO, output H_SYNC );
+  wire   GNDI;
+
+  mjeiobuf H_SYNC_pad( .I(PADDO), .T(GNDI), .PAD(H_SYNC));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (PADDO => H_SYNC) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module BLUE ( output BLUE );
+  wire   GNDI;
+
+  mjeiobuf BLUE_pad( .I(GNDI), .T(GNDI), .PAD(BLUE));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+  endspecify
+
+endmodule
+
+module GREEN ( output GREEN );
+  wire   GNDI;
+
+  mjeiobuf GREEN_pad( .I(GNDI), .T(GNDI), .PAD(GREEN));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+  endspecify
+
+endmodule
+
+module CONTORLLINES_oscc_0 ( output CFGCLK );
+
+  OSCC_B \CONTORLLINES/oscc_0_OSCC ( .OSC(CFGCLK));
+endmodule
+
+module OSCC_B ( output OSC );
+
+  OSCC INST10( .OSC(OSC));
+endmodule

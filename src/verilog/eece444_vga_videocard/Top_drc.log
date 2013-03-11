@@ -1,0 +1,30 @@
+Loading NGL library 'C:/lscc/diamond/2.1_x64/ispfpga/mj5g00e/data/mj5gelib.ngl'...
+Loading NGL library 'C:/lscc/diamond/2.1_x64/ispfpga/mj5g00/data/mj5glib.ngl'...
+Loading NGL library 'C:/lscc/diamond/2.1_x64/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library 'C:/lscc/diamond/2.1_x64/ispfpga/or5g00/data/orc5glib.ngl'...
+
+
+Running DRC...
+
+WARNING - synthesis: logical net 'RESET_c' has no load
+WARNING - synthesis: logical net 'CONTORLLINES/h_counter_75_add_4_10/CO0' has no load
+WARNING - synthesis: logical net 'CONTORLLINES/v_counter_76_add_4_12/CO0' has no load
+WARNING - synthesis: logical net 'CONTORLLINES/v_counter_76_add_4_12/CO1' has no load
+WARNING - synthesis: logical net 'CONTORLLINES/v_counter_76_add_4_12/S1' has no load
+WARNING - synthesis: logical net 'CONTORLLINES/v_counter_76_add_4_10/CO0' has no load
+WARNING - synthesis: logical net 'CONTORLLINES/v_counter_76_add_4_8/CO0' has no load
+WARNING - synthesis: logical net 'CONTORLLINES/v_counter_76_add_4_6/CO0' has no load
+WARNING - synthesis: logical net 'CONTORLLINES/v_counter_76_add_4_4/CO0' has no load
+WARNING - synthesis: logical net 'CONTORLLINES/h_counter_75_add_4_8/CO0' has no load
+WARNING - synthesis: logical net 'CONTORLLINES/v_counter_76_add_4_2/CO0' has no load
+WARNING - synthesis: logical net 'CONTORLLINES/h_counter_75_add_4_12/CO0' has no load
+WARNING - synthesis: logical net 'CONTORLLINES/h_counter_75_add_4_12/CO1' has no load
+WARNING - synthesis: logical net 'CONTORLLINES/h_counter_75_add_4_12/S1' has no load
+WARNING - synthesis: logical net 'CONTORLLINES/h_counter_75_add_4_6/CO0' has no load
+WARNING - synthesis: logical net 'CONTORLLINES/h_counter_75_add_4_4/CO0' has no load
+WARNING - synthesis: logical net 'CONTORLLINES/h_counter_75_add_4_2/CO0' has no load
+WARNING - synthesis: DRC complete with 17 warnings
+
+Design Results:
+     66 blocks expanded
+completed the first expansion

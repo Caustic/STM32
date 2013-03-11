@@ -1,0 +1,5 @@
+-rem
+-distrce
+-log "eece444_vga_videocard_eece444_vga_videocard.log"
+-o "eece444_vga_videocard_eece444_vga_videocard.csv"
+-pr "eece444_vga_videocard_eece444_vga_videocard.prf"

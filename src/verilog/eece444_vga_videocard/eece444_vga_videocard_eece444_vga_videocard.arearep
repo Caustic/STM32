@@ -1,0 +1,31 @@
+----------------------------------------------------------------------
+Report for cell Top.<NoName>
+Register bits:  24 of 2280 (1.053%)
+I/O cells:      6
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               CCU2        12          100.0
+                            FD1P3IX         2          100.0
+                            FD1S3IX        22          100.0
+                                GSR         1          100.0
+                                 IB         1          100.0
+                                INV         2          100.0
+                                 OB         5          100.0
+                           ORCALUT4        16          100.0
+                               OSCC         1          100.0
+                              PFUMX         1          100.0
+SUB MODULES
+                          CtrlLines         1
+                              TOTAL        64
+----------------------------------------------------------------------
+Report for cell CtrlLines.v1
+Instance Path : CONTORLLINES
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               CCU2        12          100.0
+                            FD1P3IX         2          100.0
+                            FD1S3IX        22          100.0
+                                INV         2          100.0
+                           ORCALUT4        16          100.0
+                              PFUMX         1          100.0
+                              TOTAL        55

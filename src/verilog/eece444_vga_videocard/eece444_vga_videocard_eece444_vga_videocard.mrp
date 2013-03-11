@@ -1,0 +1,205 @@
+             Lattice Mapping Report File for Design Module 'Top'
+
+Design Information
+------------------
+
+Command line:   map -a MachXO -p LCMXO2280C -t FTBGA256 -s 3 -oc Commercial
+     eece444_vga_videocard_eece444_vga_videocard.ngd -o
+     eece444_vga_videocard_eece444_vga_videocard_map.ncd -pr
+     eece444_vga_videocard_eece444_vga_videocard.prf -mp
+     eece444_vga_videocard_eece444_vga_videocard.mrp
+     C:/Users/fox/programming/STM32/src/verilog/eece444_vga_videocard.lpf -c 0
+Target Vendor:  LATTICE
+Target Device:  LCMXO2280CFTBGA256
+Target Performance:   3
+Mapper:  mj5g00,  version:  Diamond (64-bit) 2.1.0.103
+Mapped on:  03/10/13  19:53:14
+
+Design Summary
+--------------
+
+   Number of PFU registers:    24
+   Number of SLICEs:            21 out of  1140 (2%)
+      SLICEs(logic/ROM):        21 out of   900 (2%)
+      SLICEs(logic/ROM/RAM):     0 out of   240 (0%)
+          As RAM:            0
+          As Logic/ROM:      0
+   Number of logic LUT4s:      17
+   Number of distributed RAM:   0 (0 LUT4s)
+   Number of ripple logic:     12 (24 LUT4s)
+   Number of shift registers:   0
+   Total number of LUT4s:      41
+   Number of external PIOs: 5 out of 211 (2%)
+   Number of PLLs:  0 out of 2 (0%)
+   Number of block RAMs:  0 out of 3 (0%)
+   Number of GSRs:  0 out of 1 (0%)
+   JTAG used :      No
+   Readback used :  No
+   Oscillator used :  Yes
+   Startup used :   No
+   Number of TSALL: 0 out of 1 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+   Number of clocks:  2
+     Net clk: 7 loads, 7 rising, 0 falling (Driver: oscc_0 )
+     Net CONTORLLINES/h_counter_0: 7 loads, 0 rising, 7 falling (Driver:
+     CONTORLLINES/h_counter_75__i0 )
+   Number of Clock Enables:  2
+     Net CONTORLLINES/v_counter_1: 1 loads, 1 LSLICEs
+     Net CONTORLLINES/h_counter_4: 1 loads, 1 LSLICEs
+   Number of LSRs:  4
+     Net CONTORLLINES/n156: 6 loads, 6 LSLICEs
+     Net CONTORLLINES/n362: 1 loads, 1 LSLICEs
+     Net CONTORLLINES/n157: 6 loads, 6 LSLICEs
+     Net CONTORLLINES/n202: 1 loads, 1 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net CONTORLLINES/n156: 6 loads
+
+                                    Page 1
+
+
+
+
+Design:  Top                                           Date:  03/10/13  19:53:14
+
+Design Summary (cont)
+---------------------
+     Net CONTORLLINES/n157: 6 loads
+     Net CONTORLLINES/h_counter_4: 4 loads
+     Net CONTORLLINES/h_counter_7: 4 loads
+     Net CONTORLLINES/v_counter_1: 4 loads
+     Net CONTORLLINES/v_counter_9: 4 loads
+     Net CONTORLLINES/h_counter_5: 3 loads
+     Net CONTORLLINES/h_counter_8: 3 loads
+     Net CONTORLLINES/h_counter_9: 3 loads
+     Net CONTORLLINES/v_counter_4: 3 loads
+
+
+
+
+   Number of warnings:  0
+   Number of errors:    0
+
+Design Errors/Warnings
+----------------------
+
+   No errors or warnings present.
+
+IO (PIO) Attributes
+-------------------
+
++---------------------+-----------+-----------+------------+------------+
+| IO Name             | Direction | Levelmode | IO         | FIXEDDELAY |
+|                     |           |  IO_TYPE  | Register   |            |
++---------------------+-----------+-----------+------------+------------+
+| RED                 | OUTPUT    | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| V_SYNC              | OUTPUT    | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| H_SYNC              | OUTPUT    | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| BLUE                | OUTPUT    | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| GREEN               | OUTPUT    | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+
+Removed logic
+-------------
+
+Block GSR_INST undriven or does not drive anything - clipped.
+Block RESET_pad undriven or does not drive anything - clipped.
+Signal CONTORLLINES/n104 was merged into signal CONTORLLINES/v_counter_9
+Signal CONTORLLINES/n59 was merged into signal CONTORLLINES/h_counter_0
+Signal GND_net undriven or does not drive anything - clipped.
+Signal RESET_c undriven or does not drive anything - clipped.
+Signal RESET undriven or does not drive anything - clipped.
+Signal CONTORLLINES/h_counter_75_add_4_2/CO0 undriven or does not drive anything
+     - clipped.
+Signal CONTORLLINES/h_counter_75_add_4_4/CO0 undriven or does not drive anything
+     - clipped.
+Signal CONTORLLINES/h_counter_75_add_4_6/CO0 undriven or does not drive anything
+     - clipped.
+Signal CONTORLLINES/h_counter_75_add_4_12/S1 undriven or does not drive anything
+
+                                    Page 2
+
+
+
+
+Design:  Top                                           Date:  03/10/13  19:53:14
+
+Removed logic (cont)
+--------------------
+     - clipped.
+Signal CONTORLLINES/h_counter_75_add_4_12/CO1 undriven or does not drive
+     anything - clipped.
+Signal CONTORLLINES/h_counter_75_add_4_12/CO0 undriven or does not drive
+     anything - clipped.
+Signal CONTORLLINES/v_counter_76_add_4_2/CO0 undriven or does not drive anything
+     - clipped.
+Signal CONTORLLINES/h_counter_75_add_4_8/CO0 undriven or does not drive anything
+     - clipped.
+Signal CONTORLLINES/v_counter_76_add_4_4/CO0 undriven or does not drive anything
+     - clipped.
+Signal CONTORLLINES/v_counter_76_add_4_6/CO0 undriven or does not drive anything
+     - clipped.
+Signal CONTORLLINES/v_counter_76_add_4_8/CO0 undriven or does not drive anything
+     - clipped.
+Signal CONTORLLINES/v_counter_76_add_4_10/CO0 undriven or does not drive
+     anything - clipped.
+Signal CONTORLLINES/v_counter_76_add_4_12/S1 undriven or does not drive anything
+     - clipped.
+Signal CONTORLLINES/v_counter_76_add_4_12/CO1 undriven or does not drive
+     anything - clipped.
+Signal CONTORLLINES/v_counter_76_add_4_12/CO0 undriven or does not drive
+     anything - clipped.
+Signal CONTORLLINES/h_counter_75_add_4_10/CO0 undriven or does not drive
+     anything - clipped.
+Block CONTORLLINES/i50 was optimized away.
+Block CONTORLLINES/inv_13_i1 was optimized away.
+Block i1 was optimized away.
+
+OSC Summary
+-----------
+
+OSC 1:                                     Pin/Node Value
+  OSC Instance Name:                                oscc_0
+  OSC Type:                                         OSCC
+  OSC Output:                              NODE     clk
+
+ASIC Components
+---------------
+
+Instance Name: oscc_0
+         Type: OSCC
+
+Run Time and Memory Usage
+-------------------------
+
+   Total CPU Time: 0 secs
+   Total REAL Time: 0 secs
+   Peak Memory Usage: 33 MB
+
+
+
+
+
+
+
+
+                                    Page 3
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995
+     AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent
+     Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems
+     All rights reserved.
+Copyright (c) 2002-2012 Lattice Semiconductor
+     Corporation,  All rights reserved.

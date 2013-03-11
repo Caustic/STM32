@@ -1,0 +1,1007 @@
+<top name = "Top"  library = "work"  arch = ""  entry = "Verilog">
+
+<clocks>
+    <clockitem name = "clk"  type = "port" />
+    <clockitem name = "\CONTORLLINES/n59"  type = "port" />
+</clocks>
+
+<!--
+    //=============================================================
+    //  Number of Clocks processed: 2
+    //
+    //  If a clock cannot be found in the top level pins section,
+    //  that means it is an internal clock.
+    //
+    //=============================================================
+-->
+
+<library name = "work">
+
+<unit name = "Top">
+
+    <!--
+        Top Level Pins: 6
+    -->
+
+    <pins>
+        <pitem  name = "RESET"  direction = "in"  />
+        <pitem  name = "H_SYNC"  direction = "out"  />
+        <pitem  name = "V_SYNC"  direction = "out"  />
+        <pitem  name = "RED"  direction = "out"  />
+        <pitem  name = "BLUE"  direction = "out"  />
+        <pitem  name = "GREEN"  direction = "out"  />
+    </pins>
+
+    <!--
+        Instances in netlist: 26
+    -->
+
+    <instance  name = "i1"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "n1"  />
+        </nets>
+    </instance>
+
+    <instance  name = "i2"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "n2"  />
+        </nets>
+    </instance>
+
+    <instance  name = "\CONTORLLINES/i2"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "\CONTORLLINES/n2"  />
+        </nets>
+    </instance>
+
+    <instance  name = "\CONTORLLINES/i1"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "\CONTORLLINES/n1"  />
+        </nets>
+    </instance>
+
+    <instance  name = "oscc_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "OSC"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "clk"  />
+        </nets>
+    </instance>
+
+    <instance  name = "\CONTORLLINES/add_3"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o[10]"  direction = "out"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "\CONTORLLINES/n1"  />
+        <nitem  name = "\CONTORLLINES/n2"  />
+        <nitem  name = "\CONTORLLINES/h_counter[10]"  />
+        <nitem  name = "\CONTORLLINES/h_counter[9]"  />
+        <nitem  name = "\CONTORLLINES/h_counter[8]"  />
+        <nitem  name = "\CONTORLLINES/h_counter[7]"  />
+        <nitem  name = "\CONTORLLINES/h_counter[6]"  />
+        <nitem  name = "\CONTORLLINES/h_counter[5]"  />
+        <nitem  name = "\CONTORLLINES/h_counter[4]"  />
+        <nitem  name = "\CONTORLLINES/h_counter[3]"  />
+        <nitem  name = "\CONTORLLINES/h_counter[2]"  />
+        <nitem  name = "\CONTORLLINES/h_counter[1]"  />
+        <nitem  name = "\CONTORLLINES/h_counter[0]"  />
+        <nitem  name = "\CONTORLLINES/n6"  />
+        <nitem  name = "\CONTORLLINES/n7"  />
+        <nitem  name = "\CONTORLLINES/n8"  />
+        <nitem  name = "\CONTORLLINES/n9"  />
+        <nitem  name = "\CONTORLLINES/n10"  />
+        <nitem  name = "\CONTORLLINES/n11"  />
+        <nitem  name = "\CONTORLLINES/n12"  />
+        <nitem  name = "\CONTORLLINES/n13"  />
+        <nitem  name = "\CONTORLLINES/n14"  />
+        <nitem  name = "\CONTORLLINES/n15"  />
+        <nitem  name = "\CONTORLLINES/n16"  />
+        </nets>
+    </instance>
+
+    <instance  name = "\CONTORLLINES/equal_4"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "\CONTORLLINES/n1"  />
+        <nitem  name = "\CONTORLLINES/n2"  />
+        <nitem  name = "\CONTORLLINES/h_counter[10]"  />
+        <nitem  name = "\CONTORLLINES/h_counter[9]"  />
+        <nitem  name = "\CONTORLLINES/h_counter[8]"  />
+        <nitem  name = "\CONTORLLINES/h_counter[7]"  />
+        <nitem  name = "\CONTORLLINES/h_counter[6]"  />
+        <nitem  name = "\CONTORLLINES/h_counter[5]"  />
+        <nitem  name = "\CONTORLLINES/h_counter[4]"  />
+        <nitem  name = "\CONTORLLINES/h_counter[3]"  />
+        <nitem  name = "\CONTORLLINES/h_counter[2]"  />
+        <nitem  name = "\CONTORLLINES/h_counter[1]"  />
+        <nitem  name = "\CONTORLLINES/h_counter[0]"  />
+        <nitem  name = "\CONTORLLINES/n17"  />
+        </nets>
+    </instance>
+
+    <instance  name = "\CONTORLLINES/equal_5"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "\CONTORLLINES/n1"  />
+        <nitem  name = "\CONTORLLINES/n2"  />
+        <nitem  name = "\CONTORLLINES/h_counter[10]"  />
+        <nitem  name = "\CONTORLLINES/h_counter[9]"  />
+        <nitem  name = "\CONTORLLINES/h_counter[8]"  />
+        <nitem  name = "\CONTORLLINES/h_counter[7]"  />
+        <nitem  name = "\CONTORLLINES/h_counter[6]"  />
+        <nitem  name = "\CONTORLLINES/h_counter[5]"  />
+        <nitem  name = "\CONTORLLINES/h_counter[4]"  />
+        <nitem  name = "\CONTORLLINES/h_counter[3]"  />
+        <nitem  name = "\CONTORLLINES/h_counter[2]"  />
+        <nitem  name = "\CONTORLLINES/h_counter[1]"  />
+        <nitem  name = "\CONTORLLINES/h_counter[0]"  />
+        <nitem  name = "\CONTORLLINES/n18"  />
+        </nets>
+    </instance>
+
+    <instance  name = "\CONTORLLINES/equal_6"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "\CONTORLLINES/n1"  />
+        <nitem  name = "\CONTORLLINES/n2"  />
+        <nitem  name = "\CONTORLLINES/h_counter[10]"  />
+        <nitem  name = "\CONTORLLINES/h_counter[9]"  />
+        <nitem  name = "\CONTORLLINES/h_counter[8]"  />
+        <nitem  name = "\CONTORLLINES/h_counter[7]"  />
+        <nitem  name = "\CONTORLLINES/h_counter[6]"  />
+        <nitem  name = "\CONTORLLINES/h_counter[5]"  />
+        <nitem  name = "\CONTORLLINES/h_counter[4]"  />
+        <nitem  name = "\CONTORLLINES/h_counter[3]"  />
+        <nitem  name = "\CONTORLLINES/h_counter[2]"  />
+        <nitem  name = "\CONTORLLINES/h_counter[1]"  />
+        <nitem  name = "\CONTORLLINES/h_counter[0]"  />
+        <nitem  name = "\CONTORLLINES/n19"  />
+        </nets>
+    </instance>
+
+    <instance  name = "\CONTORLLINES/reduce_nor_7"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "\CONTORLLINES/n17"  />
+        <nitem  name = "\CONTORLLINES/n18"  />
+        <nitem  name = "\CONTORLLINES/n19"  />
+        <nitem  name = "\CONTORLLINES/n20"  />
+        </nets>
+    </instance>
+
+    <instance  name = "\CONTORLLINES/i9"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "\CONTORLLINES/n18"  />
+        <nitem  name = "\CONTORLLINES/n20"  />
+        <nitem  name = "\CONTORLLINES/n21"  />
+        </nets>
+    </instance>
+
+    <instance  name = "\CONTORLLINES/Select_9"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "data[1]"  direction = "in"  />
+        <pitem  name = "data[2]"  direction = "in"  />
+        <pitem  name = "data[0]"  direction = "in"  />
+        <pitem  name = "sel[2]"  direction = "in"  />
+        <pitem  name = "sel[0]"  direction = "in"  />
+        <pitem  name = "sel[1]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "\CONTORLLINES/n1"  />
+        <nitem  name = "\CONTORLLINES/n2"  />
+        <nitem  name = "H_SYNC"  />
+        <nitem  name = "\CONTORLLINES/n17"  />
+        <nitem  name = "\CONTORLLINES/n19"  />
+        <nitem  name = "\CONTORLLINES/n21"  />
+        <nitem  name = "\CONTORLLINES/n22"  />
+        </nets>
+    </instance>
+
+    <instance  name = "\CONTORLLINES/select_10"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "data[21]"  direction = "in"  />
+        <pitem  name = "data[20]"  direction = "in"  />
+        <pitem  name = "data[19]"  direction = "in"  />
+        <pitem  name = "data[18]"  direction = "in"  />
+        <pitem  name = "data[17]"  direction = "in"  />
+        <pitem  name = "data[16]"  direction = "in"  />
+        <pitem  name = "data[15]"  direction = "in"  />
+        <pitem  name = "data[14]"  direction = "in"  />
+        <pitem  name = "data[13]"  direction = "in"  />
+        <pitem  name = "data[12]"  direction = "in"  />
+        <pitem  name = "data[11]"  direction = "in"  />
+        <pitem  name = "data[43]"  direction = "in"  />
+        <pitem  name = "data[32]"  direction = "in"  />
+        <pitem  name = "data[10]"  direction = "in"  />
+        <pitem  name = "data[42]"  direction = "in"  />
+        <pitem  name = "data[31]"  direction = "in"  />
+        <pitem  name = "data[9]"  direction = "in"  />
+        <pitem  name = "data[41]"  direction = "in"  />
+        <pitem  name = "data[30]"  direction = "in"  />
+        <pitem  name = "data[8]"  direction = "in"  />
+        <pitem  name = "data[40]"  direction = "in"  />
+        <pitem  name = "data[29]"  direction = "in"  />
+        <pitem  name = "data[7]"  direction = "in"  />
+        <pitem  name = "data[39]"  direction = "in"  />
+        <pitem  name = "data[28]"  direction = "in"  />
+        <pitem  name = "data[6]"  direction = "in"  />
+        <pitem  name = "data[38]"  direction = "in"  />
+        <pitem  name = "data[27]"  direction = "in"  />
+        <pitem  name = "data[5]"  direction = "in"  />
+        <pitem  name = "data[37]"  direction = "in"  />
+        <pitem  name = "data[26]"  direction = "in"  />
+        <pitem  name = "data[4]"  direction = "in"  />
+        <pitem  name = "data[36]"  direction = "in"  />
+        <pitem  name = "data[25]"  direction = "in"  />
+        <pitem  name = "data[3]"  direction = "in"  />
+        <pitem  name = "data[35]"  direction = "in"  />
+        <pitem  name = "data[24]"  direction = "in"  />
+        <pitem  name = "data[2]"  direction = "in"  />
+        <pitem  name = "data[34]"  direction = "in"  />
+        <pitem  name = "data[23]"  direction = "in"  />
+        <pitem  name = "data[1]"  direction = "in"  />
+        <pitem  name = "data[33]"  direction = "in"  />
+        <pitem  name = "data[22]"  direction = "in"  />
+        <pitem  name = "data[0]"  direction = "in"  />
+        <pitem  name = "sel[3]"  direction = "in"  />
+        <pitem  name = "sel[2]"  direction = "in"  />
+        <pitem  name = "sel[1]"  direction = "in"  />
+        <pitem  name = "sel[0]"  direction = "in"  />
+        <pitem  name = "o[10]"  direction = "out"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "\CONTORLLINES/n1"  />
+        <nitem  name = "\CONTORLLINES/n6"  />
+        <nitem  name = "\CONTORLLINES/n7"  />
+        <nitem  name = "\CONTORLLINES/n8"  />
+        <nitem  name = "\CONTORLLINES/n9"  />
+        <nitem  name = "\CONTORLLINES/n10"  />
+        <nitem  name = "\CONTORLLINES/n11"  />
+        <nitem  name = "\CONTORLLINES/n12"  />
+        <nitem  name = "\CONTORLLINES/n13"  />
+        <nitem  name = "\CONTORLLINES/n14"  />
+        <nitem  name = "\CONTORLLINES/n15"  />
+        <nitem  name = "\CONTORLLINES/n16"  />
+        <nitem  name = "\CONTORLLINES/n17"  />
+        <nitem  name = "\CONTORLLINES/n18"  />
+        <nitem  name = "\CONTORLLINES/n19"  />
+        <nitem  name = "\CONTORLLINES/n20"  />
+        <nitem  name = "\CONTORLLINES/n24"  />
+        <nitem  name = "\CONTORLLINES/n25"  />
+        <nitem  name = "\CONTORLLINES/n26"  />
+        <nitem  name = "\CONTORLLINES/n27"  />
+        <nitem  name = "\CONTORLLINES/n28"  />
+        <nitem  name = "\CONTORLLINES/n29"  />
+        <nitem  name = "\CONTORLLINES/n30"  />
+        <nitem  name = "\CONTORLLINES/n31"  />
+        <nitem  name = "\CONTORLLINES/n32"  />
+        <nitem  name = "\CONTORLLINES/n33"  />
+        <nitem  name = "\CONTORLLINES/n34"  />
+        </nets>
+    </instance>
+
+    <instance  name = "\CONTORLLINES/H_SYNC_26"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "r"  direction = "in"  />
+        <pitem  name = "s"  direction = "in"  />
+        <pitem  name = "clk"  direction = "in"  />
+        <pitem  name = "q"  direction = "out"  />
+        <pitem  name = "d"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "\CONTORLLINES/n1"  />
+        <nitem  name = "clk"  />
+        <nitem  name = "H_SYNC"  />
+        <nitem  name = "\CONTORLLINES/n22"  />
+        </nets>
+    </instance>
+
+    <instance  name = "\CONTORLLINES/v_counter"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "set[1]"  direction = "in"  />
+        <pitem  name = "set[2]"  direction = "in"  />
+        <pitem  name = "set[3]"  direction = "in"  />
+        <pitem  name = "set[4]"  direction = "in"  />
+        <pitem  name = "set[5]"  direction = "in"  />
+        <pitem  name = "set[6]"  direction = "in"  />
+        <pitem  name = "set[7]"  direction = "in"  />
+        <pitem  name = "set[8]"  direction = "in"  />
+        <pitem  name = "set[9]"  direction = "in"  />
+        <pitem  name = "set[10]"  direction = "in"  />
+        <pitem  name = "set[0]"  direction = "in"  />
+        <pitem  name = "reset[10]"  direction = "in"  />
+        <pitem  name = "reset[9]"  direction = "in"  />
+        <pitem  name = "reset[8]"  direction = "in"  />
+        <pitem  name = "reset[7]"  direction = "in"  />
+        <pitem  name = "reset[6]"  direction = "in"  />
+        <pitem  name = "reset[5]"  direction = "in"  />
+        <pitem  name = "reset[4]"  direction = "in"  />
+        <pitem  name = "reset[3]"  direction = "in"  />
+        <pitem  name = "reset[2]"  direction = "in"  />
+        <pitem  name = "reset[1]"  direction = "in"  />
+        <pitem  name = "reset[0]"  direction = "in"  />
+        <pitem  name = "q[10]"  direction = "out"  />
+        <pitem  name = "q[9]"  direction = "out"  />
+        <pitem  name = "q[8]"  direction = "out"  />
+        <pitem  name = "q[7]"  direction = "out"  />
+        <pitem  name = "q[6]"  direction = "out"  />
+        <pitem  name = "q[5]"  direction = "out"  />
+        <pitem  name = "q[4]"  direction = "out"  />
+        <pitem  name = "q[3]"  direction = "out"  />
+        <pitem  name = "q[2]"  direction = "out"  />
+        <pitem  name = "q[1]"  direction = "out"  />
+        <pitem  name = "q[0]"  direction = "out"  />
+        <pitem  name = "clock"  direction = "in"  />
+        <pitem  name = "d[10]"  direction = "in"  />
+        <pitem  name = "d[9]"  direction = "in"  />
+        <pitem  name = "d[8]"  direction = "in"  />
+        <pitem  name = "d[7]"  direction = "in"  />
+        <pitem  name = "d[6]"  direction = "in"  />
+        <pitem  name = "d[5]"  direction = "in"  />
+        <pitem  name = "d[4]"  direction = "in"  />
+        <pitem  name = "d[3]"  direction = "in"  />
+        <pitem  name = "d[2]"  direction = "in"  />
+        <pitem  name = "d[1]"  direction = "in"  />
+        <pitem  name = "d[0]"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "\CONTORLLINES/n1"  />
+        <nitem  name = "\CONTORLLINES/v_counter[10]"  />
+        <nitem  name = "\CONTORLLINES/v_counter[9]"  />
+        <nitem  name = "\CONTORLLINES/v_counter[8]"  />
+        <nitem  name = "\CONTORLLINES/v_counter[7]"  />
+        <nitem  name = "\CONTORLLINES/v_counter[6]"  />
+        <nitem  name = "\CONTORLLINES/v_counter[5]"  />
+        <nitem  name = "\CONTORLLINES/v_counter[4]"  />
+        <nitem  name = "\CONTORLLINES/v_counter[3]"  />
+        <nitem  name = "\CONTORLLINES/v_counter[2]"  />
+        <nitem  name = "\CONTORLLINES/v_counter[1]"  />
+        <nitem  name = "\CONTORLLINES/v_counter[0]"  />
+        <nitem  name = "\CONTORLLINES/n59"  />
+        <nitem  name = "\CONTORLLINES/n80"  />
+        <nitem  name = "\CONTORLLINES/n81"  />
+        <nitem  name = "\CONTORLLINES/n82"  />
+        <nitem  name = "\CONTORLLINES/n83"  />
+        <nitem  name = "\CONTORLLINES/n84"  />
+        <nitem  name = "\CONTORLLINES/n85"  />
+        <nitem  name = "\CONTORLLINES/n86"  />
+        <nitem  name = "\CONTORLLINES/n87"  />
+        <nitem  name = "\CONTORLLINES/n88"  />
+        <nitem  name = "\CONTORLLINES/n89"  />
+        <nitem  name = "\CONTORLLINES/n90"  />
+        </nets>
+    </instance>
+
+    <instance  name = "\CONTORLLINES/inv_13"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "i[10]"  direction = "in"  />
+        <pitem  name = "i[9]"  direction = "in"  />
+        <pitem  name = "i[8]"  direction = "in"  />
+        <pitem  name = "i[7]"  direction = "in"  />
+        <pitem  name = "i[6]"  direction = "in"  />
+        <pitem  name = "i[5]"  direction = "in"  />
+        <pitem  name = "i[4]"  direction = "in"  />
+        <pitem  name = "i[3]"  direction = "in"  />
+        <pitem  name = "i[2]"  direction = "in"  />
+        <pitem  name = "i[1]"  direction = "in"  />
+        <pitem  name = "i[0]"  direction = "in"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "\CONTORLLINES/h_counter[10]"  />
+        <nitem  name = "\CONTORLLINES/h_counter[9]"  />
+        <nitem  name = "\CONTORLLINES/h_counter[8]"  />
+        <nitem  name = "\CONTORLLINES/h_counter[7]"  />
+        <nitem  name = "\CONTORLLINES/h_counter[6]"  />
+        <nitem  name = "\CONTORLLINES/h_counter[5]"  />
+        <nitem  name = "\CONTORLLINES/h_counter[4]"  />
+        <nitem  name = "\CONTORLLINES/h_counter[3]"  />
+        <nitem  name = "\CONTORLLINES/h_counter[2]"  />
+        <nitem  name = "\CONTORLLINES/h_counter[1]"  />
+        <nitem  name = "\CONTORLLINES/h_counter[0]"  />
+        <nitem  name = "\CONTORLLINES/n59"  />
+        </nets>
+    </instance>
+
+    <instance  name = "\CONTORLLINES/add_14"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o[10]"  direction = "out"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "\CONTORLLINES/n1"  />
+        <nitem  name = "\CONTORLLINES/n2"  />
+        <nitem  name = "\CONTORLLINES/v_counter[10]"  />
+        <nitem  name = "\CONTORLLINES/v_counter[9]"  />
+        <nitem  name = "\CONTORLLINES/v_counter[8]"  />
+        <nitem  name = "\CONTORLLINES/v_counter[7]"  />
+        <nitem  name = "\CONTORLLINES/v_counter[6]"  />
+        <nitem  name = "\CONTORLLINES/v_counter[5]"  />
+        <nitem  name = "\CONTORLLINES/v_counter[4]"  />
+        <nitem  name = "\CONTORLLINES/v_counter[3]"  />
+        <nitem  name = "\CONTORLLINES/v_counter[2]"  />
+        <nitem  name = "\CONTORLLINES/v_counter[1]"  />
+        <nitem  name = "\CONTORLLINES/v_counter[0]"  />
+        <nitem  name = "\CONTORLLINES/n62"  />
+        <nitem  name = "\CONTORLLINES/n63"  />
+        <nitem  name = "\CONTORLLINES/n64"  />
+        <nitem  name = "\CONTORLLINES/n65"  />
+        <nitem  name = "\CONTORLLINES/n66"  />
+        <nitem  name = "\CONTORLLINES/n67"  />
+        <nitem  name = "\CONTORLLINES/n68"  />
+        <nitem  name = "\CONTORLLINES/n69"  />
+        <nitem  name = "\CONTORLLINES/n70"  />
+        <nitem  name = "\CONTORLLINES/n71"  />
+        <nitem  name = "\CONTORLLINES/n72"  />
+        </nets>
+    </instance>
+
+    <instance  name = "\CONTORLLINES/equal_15"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "\CONTORLLINES/n1"  />
+        <nitem  name = "\CONTORLLINES/n2"  />
+        <nitem  name = "\CONTORLLINES/v_counter[10]"  />
+        <nitem  name = "\CONTORLLINES/v_counter[9]"  />
+        <nitem  name = "\CONTORLLINES/v_counter[8]"  />
+        <nitem  name = "\CONTORLLINES/v_counter[7]"  />
+        <nitem  name = "\CONTORLLINES/v_counter[6]"  />
+        <nitem  name = "\CONTORLLINES/v_counter[5]"  />
+        <nitem  name = "\CONTORLLINES/v_counter[4]"  />
+        <nitem  name = "\CONTORLLINES/v_counter[3]"  />
+        <nitem  name = "\CONTORLLINES/v_counter[2]"  />
+        <nitem  name = "\CONTORLLINES/v_counter[1]"  />
+        <nitem  name = "\CONTORLLINES/v_counter[0]"  />
+        <nitem  name = "\CONTORLLINES/n73"  />
+        </nets>
+    </instance>
+
+    <instance  name = "\CONTORLLINES/equal_16"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "\CONTORLLINES/n1"  />
+        <nitem  name = "\CONTORLLINES/n2"  />
+        <nitem  name = "\CONTORLLINES/v_counter[10]"  />
+        <nitem  name = "\CONTORLLINES/v_counter[9]"  />
+        <nitem  name = "\CONTORLLINES/v_counter[8]"  />
+        <nitem  name = "\CONTORLLINES/v_counter[7]"  />
+        <nitem  name = "\CONTORLLINES/v_counter[6]"  />
+        <nitem  name = "\CONTORLLINES/v_counter[5]"  />
+        <nitem  name = "\CONTORLLINES/v_counter[4]"  />
+        <nitem  name = "\CONTORLLINES/v_counter[3]"  />
+        <nitem  name = "\CONTORLLINES/v_counter[2]"  />
+        <nitem  name = "\CONTORLLINES/v_counter[1]"  />
+        <nitem  name = "\CONTORLLINES/v_counter[0]"  />
+        <nitem  name = "\CONTORLLINES/n74"  />
+        </nets>
+    </instance>
+
+    <instance  name = "\CONTORLLINES/equal_17"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "\CONTORLLINES/n1"  />
+        <nitem  name = "\CONTORLLINES/n2"  />
+        <nitem  name = "\CONTORLLINES/v_counter[10]"  />
+        <nitem  name = "\CONTORLLINES/v_counter[9]"  />
+        <nitem  name = "\CONTORLLINES/v_counter[8]"  />
+        <nitem  name = "\CONTORLLINES/v_counter[7]"  />
+        <nitem  name = "\CONTORLLINES/v_counter[6]"  />
+        <nitem  name = "\CONTORLLINES/v_counter[5]"  />
+        <nitem  name = "\CONTORLLINES/v_counter[4]"  />
+        <nitem  name = "\CONTORLLINES/v_counter[3]"  />
+        <nitem  name = "\CONTORLLINES/v_counter[2]"  />
+        <nitem  name = "\CONTORLLINES/v_counter[1]"  />
+        <nitem  name = "\CONTORLLINES/v_counter[0]"  />
+        <nitem  name = "\CONTORLLINES/n75"  />
+        </nets>
+    </instance>
+
+    <instance  name = "\CONTORLLINES/reduce_nor_18"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "\CONTORLLINES/n73"  />
+        <nitem  name = "\CONTORLLINES/n74"  />
+        <nitem  name = "\CONTORLLINES/n75"  />
+        <nitem  name = "\CONTORLLINES/n76"  />
+        </nets>
+    </instance>
+
+    <instance  name = "\CONTORLLINES/i20"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "\CONTORLLINES/n74"  />
+        <nitem  name = "\CONTORLLINES/n76"  />
+        <nitem  name = "\CONTORLLINES/n77"  />
+        </nets>
+    </instance>
+
+    <instance  name = "\CONTORLLINES/Select_20"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "data[1]"  direction = "in"  />
+        <pitem  name = "data[2]"  direction = "in"  />
+        <pitem  name = "data[0]"  direction = "in"  />
+        <pitem  name = "sel[2]"  direction = "in"  />
+        <pitem  name = "sel[0]"  direction = "in"  />
+        <pitem  name = "sel[1]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "\CONTORLLINES/n1"  />
+        <nitem  name = "\CONTORLLINES/n2"  />
+        <nitem  name = "V_SYNC"  />
+        <nitem  name = "\CONTORLLINES/n73"  />
+        <nitem  name = "\CONTORLLINES/n75"  />
+        <nitem  name = "\CONTORLLINES/n77"  />
+        <nitem  name = "\CONTORLLINES/n78"  />
+        </nets>
+    </instance>
+
+    <instance  name = "\CONTORLLINES/select_21"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "data[21]"  direction = "in"  />
+        <pitem  name = "data[20]"  direction = "in"  />
+        <pitem  name = "data[19]"  direction = "in"  />
+        <pitem  name = "data[18]"  direction = "in"  />
+        <pitem  name = "data[17]"  direction = "in"  />
+        <pitem  name = "data[16]"  direction = "in"  />
+        <pitem  name = "data[15]"  direction = "in"  />
+        <pitem  name = "data[14]"  direction = "in"  />
+        <pitem  name = "data[13]"  direction = "in"  />
+        <pitem  name = "data[12]"  direction = "in"  />
+        <pitem  name = "data[11]"  direction = "in"  />
+        <pitem  name = "data[43]"  direction = "in"  />
+        <pitem  name = "data[32]"  direction = "in"  />
+        <pitem  name = "data[10]"  direction = "in"  />
+        <pitem  name = "data[42]"  direction = "in"  />
+        <pitem  name = "data[31]"  direction = "in"  />
+        <pitem  name = "data[9]"  direction = "in"  />
+        <pitem  name = "data[41]"  direction = "in"  />
+        <pitem  name = "data[30]"  direction = "in"  />
+        <pitem  name = "data[8]"  direction = "in"  />
+        <pitem  name = "data[40]"  direction = "in"  />
+        <pitem  name = "data[29]"  direction = "in"  />
+        <pitem  name = "data[7]"  direction = "in"  />
+        <pitem  name = "data[39]"  direction = "in"  />
+        <pitem  name = "data[28]"  direction = "in"  />
+        <pitem  name = "data[6]"  direction = "in"  />
+        <pitem  name = "data[38]"  direction = "in"  />
+        <pitem  name = "data[27]"  direction = "in"  />
+        <pitem  name = "data[5]"  direction = "in"  />
+        <pitem  name = "data[37]"  direction = "in"  />
+        <pitem  name = "data[26]"  direction = "in"  />
+        <pitem  name = "data[4]"  direction = "in"  />
+        <pitem  name = "data[36]"  direction = "in"  />
+        <pitem  name = "data[25]"  direction = "in"  />
+        <pitem  name = "data[3]"  direction = "in"  />
+        <pitem  name = "data[35]"  direction = "in"  />
+        <pitem  name = "data[24]"  direction = "in"  />
+        <pitem  name = "data[2]"  direction = "in"  />
+        <pitem  name = "data[34]"  direction = "in"  />
+        <pitem  name = "data[23]"  direction = "in"  />
+        <pitem  name = "data[1]"  direction = "in"  />
+        <pitem  name = "data[33]"  direction = "in"  />
+        <pitem  name = "data[22]"  direction = "in"  />
+        <pitem  name = "data[0]"  direction = "in"  />
+        <pitem  name = "sel[3]"  direction = "in"  />
+        <pitem  name = "sel[2]"  direction = "in"  />
+        <pitem  name = "sel[1]"  direction = "in"  />
+        <pitem  name = "sel[0]"  direction = "in"  />
+        <pitem  name = "o[10]"  direction = "out"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "\CONTORLLINES/n1"  />
+        <nitem  name = "\CONTORLLINES/n62"  />
+        <nitem  name = "\CONTORLLINES/n63"  />
+        <nitem  name = "\CONTORLLINES/n64"  />
+        <nitem  name = "\CONTORLLINES/n65"  />
+        <nitem  name = "\CONTORLLINES/n66"  />
+        <nitem  name = "\CONTORLLINES/n67"  />
+        <nitem  name = "\CONTORLLINES/n68"  />
+        <nitem  name = "\CONTORLLINES/n69"  />
+        <nitem  name = "\CONTORLLINES/n70"  />
+        <nitem  name = "\CONTORLLINES/n71"  />
+        <nitem  name = "\CONTORLLINES/n72"  />
+        <nitem  name = "\CONTORLLINES/n73"  />
+        <nitem  name = "\CONTORLLINES/n74"  />
+        <nitem  name = "\CONTORLLINES/n75"  />
+        <nitem  name = "\CONTORLLINES/n76"  />
+        <nitem  name = "\CONTORLLINES/n80"  />
+        <nitem  name = "\CONTORLLINES/n81"  />
+        <nitem  name = "\CONTORLLINES/n82"  />
+        <nitem  name = "\CONTORLLINES/n83"  />
+        <nitem  name = "\CONTORLLINES/n84"  />
+        <nitem  name = "\CONTORLLINES/n85"  />
+        <nitem  name = "\CONTORLLINES/n86"  />
+        <nitem  name = "\CONTORLLINES/n87"  />
+        <nitem  name = "\CONTORLLINES/n88"  />
+        <nitem  name = "\CONTORLLINES/n89"  />
+        <nitem  name = "\CONTORLLINES/n90"  />
+        </nets>
+    </instance>
+
+    <instance  name = "\CONTORLLINES/V_SYNC_28"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "r"  direction = "in"  />
+        <pitem  name = "s"  direction = "in"  />
+        <pitem  name = "q"  direction = "out"  />
+        <pitem  name = "clk"  direction = "in"  />
+        <pitem  name = "d"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "\CONTORLLINES/n1"  />
+        <nitem  name = "V_SYNC"  />
+        <nitem  name = "\CONTORLLINES/n59"  />
+        <nitem  name = "\CONTORLLINES/n78"  />
+        </nets>
+    </instance>
+
+    <instance  name = "\CONTORLLINES/h_counter"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "set[10]"  direction = "in"  />
+        <pitem  name = "set[9]"  direction = "in"  />
+        <pitem  name = "set[8]"  direction = "in"  />
+        <pitem  name = "set[7]"  direction = "in"  />
+        <pitem  name = "set[6]"  direction = "in"  />
+        <pitem  name = "set[5]"  direction = "in"  />
+        <pitem  name = "set[4]"  direction = "in"  />
+        <pitem  name = "set[3]"  direction = "in"  />
+        <pitem  name = "set[2]"  direction = "in"  />
+        <pitem  name = "set[1]"  direction = "in"  />
+        <pitem  name = "set[0]"  direction = "in"  />
+        <pitem  name = "reset[10]"  direction = "in"  />
+        <pitem  name = "reset[9]"  direction = "in"  />
+        <pitem  name = "reset[8]"  direction = "in"  />
+        <pitem  name = "reset[7]"  direction = "in"  />
+        <pitem  name = "reset[6]"  direction = "in"  />
+        <pitem  name = "reset[5]"  direction = "in"  />
+        <pitem  name = "reset[4]"  direction = "in"  />
+        <pitem  name = "reset[3]"  direction = "in"  />
+        <pitem  name = "reset[2]"  direction = "in"  />
+        <pitem  name = "reset[1]"  direction = "in"  />
+        <pitem  name = "reset[0]"  direction = "in"  />
+        <pitem  name = "clock"  direction = "in"  />
+        <pitem  name = "q[10]"  direction = "out"  />
+        <pitem  name = "q[9]"  direction = "out"  />
+        <pitem  name = "q[8]"  direction = "out"  />
+        <pitem  name = "q[7]"  direction = "out"  />
+        <pitem  name = "q[6]"  direction = "out"  />
+        <pitem  name = "q[5]"  direction = "out"  />
+        <pitem  name = "q[4]"  direction = "out"  />
+        <pitem  name = "q[3]"  direction = "out"  />
+        <pitem  name = "q[2]"  direction = "out"  />
+        <pitem  name = "q[1]"  direction = "out"  />
+        <pitem  name = "q[0]"  direction = "out"  />
+        <pitem  name = "d[10]"  direction = "in"  />
+        <pitem  name = "d[9]"  direction = "in"  />
+        <pitem  name = "d[8]"  direction = "in"  />
+        <pitem  name = "d[7]"  direction = "in"  />
+        <pitem  name = "d[6]"  direction = "in"  />
+        <pitem  name = "d[5]"  direction = "in"  />
+        <pitem  name = "d[4]"  direction = "in"  />
+        <pitem  name = "d[3]"  direction = "in"  />
+        <pitem  name = "d[2]"  direction = "in"  />
+        <pitem  name = "d[1]"  direction = "in"  />
+        <pitem  name = "d[0]"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "\CONTORLLINES/n1"  />
+        <nitem  name = "clk"  />
+        <nitem  name = "\CONTORLLINES/h_counter[10]"  />
+        <nitem  name = "\CONTORLLINES/h_counter[9]"  />
+        <nitem  name = "\CONTORLLINES/h_counter[8]"  />
+        <nitem  name = "\CONTORLLINES/h_counter[7]"  />
+        <nitem  name = "\CONTORLLINES/h_counter[6]"  />
+        <nitem  name = "\CONTORLLINES/h_counter[5]"  />
+        <nitem  name = "\CONTORLLINES/h_counter[4]"  />
+        <nitem  name = "\CONTORLLINES/h_counter[3]"  />
+        <nitem  name = "\CONTORLLINES/h_counter[2]"  />
+        <nitem  name = "\CONTORLLINES/h_counter[1]"  />
+        <nitem  name = "\CONTORLLINES/h_counter[0]"  />
+        <nitem  name = "\CONTORLLINES/n24"  />
+        <nitem  name = "\CONTORLLINES/n25"  />
+        <nitem  name = "\CONTORLLINES/n26"  />
+        <nitem  name = "\CONTORLLINES/n27"  />
+        <nitem  name = "\CONTORLLINES/n28"  />
+        <nitem  name = "\CONTORLLINES/n29"  />
+        <nitem  name = "\CONTORLLINES/n30"  />
+        <nitem  name = "\CONTORLLINES/n31"  />
+        <nitem  name = "\CONTORLLINES/n32"  />
+        <nitem  name = "\CONTORLLINES/n33"  />
+        <nitem  name = "\CONTORLLINES/n34"  />
+        </nets>
+    </instance>
+
+</unit>
+
+</library>
+
+</top>

@@ -1,0 +1,28 @@
+PAR: Place And Route Diamond (64-bit) 2.1.0.103.
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2012 Lattice Semiconductor Corporation,  All rights reserved.
+Sun Mar 10 19:53:14 2013
+
+C:/lscc/diamond/2.1_x64/ispfpga\bin\nt64\par -f
+eece444_vga_videocard_eece444_vga_videocard.p2t
+eece444_vga_videocard_eece444_vga_videocard_map.ncd
+eece444_vga_videocard_eece444_vga_videocard.dir
+eece444_vga_videocard_eece444_vga_videocard.prf
+
+
+Preference file: eece444_vga_videocard_eece444_vga_videocard.prf.
+
+Level/      Number      Worst       Timing      Run         NCD
+Cost [ncd]  Unrouted    Slack       Score       Time        Status
+----------  --------    -----       --------    -----       ------
+5_1   *     0           31.478      0           03          Complete        
+
+
+* : Design saved.
+
+Total (real) run time for 1-seed: 3 secs 
+
+par done!
