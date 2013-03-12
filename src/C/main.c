@@ -20,12 +20,9 @@
 #include <libopencm3/stm32/f1/rcc.h>
 #include <libopencm3/stm32/f1/gpio.h>
 #include <libopencm3/stm32/usart.h>
+#include <libopencm3/stm32/f1/adc.h>
 #include "str.h"
 #include "lcd.h"
-
-void clock_setup(void);
-void usart_setup(void);
-void gpio_setup(void);
 
 static void clock_setup(void)
 {
@@ -85,7 +82,7 @@ static void adc_setup(void)
 int main(void)
 {
     int i;
-    char *message = "Hello World!";
+    char buffer[256];
     u16 adc_val;
     /* This is Space Invaders */
     /* [ctrl byte, char to change, bmp string] */
@@ -94,6 +91,7 @@ int main(void)
     clock_setup();
     gpio_setup();
     usart_setup();
+	adc_setup();
     clearlcd();
     /* Configure Space Invaders Characters */
     for(i = 0; i < 20; i++)
@@ -101,8 +99,10 @@ int main(void)
     printlcd("\x80\x81");
     /* Show Space Invaders Characters */
     while (1) {
-        adc_val = adc_read_regular(ADC1);
         clearlcd();
+        adc_val = adc_read_regular(ADC1);
+        itoa(adc_val, buffer);
+        printlcd(buffer);
         /* Blink the LED (PC9) on the board with every transmitted byte. */
         gpio_toggle(GPIOC, GPIO9);	/* LED on/off */
         for (i = 0; i < 800000; i++)	/* Wait a bit. */
