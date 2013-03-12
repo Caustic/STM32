@@ -14,6 +14,7 @@ How to get Started
         git submodule init
         git submodule update
 
+* __NOTE__: You can install GNU ARM Embedded Toolchain instead of Summon Arm Toolchain, just make sure its on your path!
 * Install Summon Arm Toolchain First
 
         git clone git://github.com/esden/summon-arm-toolchain.git
