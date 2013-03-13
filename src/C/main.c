@@ -60,23 +60,24 @@ static void gpio_setup(void)
 
 static void adc_setup(void)
 {
-    /* ADC1 uses port A and C */
+    u8 channel;
+    /* ADC1 port A0 */
 	gpio_set_mode(GPIOA, GPIO_MODE_INPUT, GPIO_CNF_INPUT_ANALOG, GPIO0);
 	/* Make sure the ADC doesn't run during config. */
 	adc_off(ADC1);
 	/* We configure everything for one single conversion. */
 	adc_disable_scan_mode(ADC1);
-    adc_set_continuous_conversion_mode(ADC1);
 	adc_disable_external_trigger_regular(ADC1);
 	adc_set_right_aligned(ADC1);
+	adc_set_continuous_conversion_mode(ADC1);
 	adc_set_sample_time_on_all_channels(ADC1, ADC_SMPR_SMP_28DOT5CYC);
 	adc_power_on(ADC1);
-	/* Wait for ADC starting up. */
 	int i;
 	for (i = 0; i < 800000; i++) /* Wait a bit. */
 		__asm__("nop");
 	adc_reset_calibration(ADC1);
 	adc_calibration(ADC1);
+    adc_start_conversion_direct(ADC1);
 }
 
 int main(void)
@@ -96,10 +97,11 @@ int main(void)
     /* Configure Space Invaders Characters */
     for(i = 0; i < 20; i++)
         usart_send_blocking(USART1, *(mkch0+i));
-    printlcd("\x80\x81");
-    /* Show Space Invaders Characters */
     while (1) {
         clearlcd();
+        /* Show Space Invaders Characters */
+        printlcd("\x80\x81");
+        while(!adc_eoc(ADC1));
         adc_val = adc_read_regular(ADC1);
         itoa(adc_val, buffer);
         printlcd(buffer);
