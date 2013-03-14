@@ -21,8 +21,12 @@
 #include <libopencm3/stm32/f1/gpio.h>
 #include <libopencm3/stm32/usart.h>
 #include <libopencm3/stm32/f1/adc.h>
+#include <libopencm3/stm32/f1/timer.h>
+#include <libopencm3/stm32/f1/nvic.h>
 #include "str.h"
 #include "lcd.h"
+
+static volatile u16 adc_val;
 
 static void clock_setup(void)
 {
@@ -31,6 +35,7 @@ static void clock_setup(void)
     rcc_peripheral_enable_clock(&RCC_APB2ENR, RCC_APB2ENR_IOPCEN);
     rcc_peripheral_enable_clock(&RCC_APB2ENR, RCC_APB2ENR_USART1EN);
 	rcc_peripheral_enable_clock(&RCC_APB2ENR, RCC_APB2ENR_ADC1EN);
+	rcc_peripheral_enable_clock(&RCC_APB1ENR, RCC_APB1ENR_TIM3EN);
 }
 
 static void usart_setup(void)
@@ -60,7 +65,6 @@ static void gpio_setup(void)
 
 static void adc_setup(void)
 {
-    u8 channel;
     /* ADC1 port A0 */
 	gpio_set_mode(GPIOA, GPIO_MODE_INPUT, GPIO_CNF_INPUT_ANALOG, GPIO0);
 	/* Make sure the ADC doesn't run during config. */
@@ -80,10 +84,25 @@ static void adc_setup(void)
     adc_start_conversion_direct(ADC1);
 }
 
-static void nvic_setup(void)
+static void tim3_setup(void)
 {
-    nvic_enable_irq(NVIC_RTC_IRQ);
-    nvic_set_priority(NVIC_TRC_IRQ, 1);
+    timer_reset(TIM3);
+    timer_set_prescaler(TIM3, 544);
+    timer_set_period(TIM3, 1);
+    nvic_enable_irq(NVIC_TIM3_IRQ);
+	timer_enable_update_event(TIM3); // default at reset!
+    /* Set DMA/Interrupt Enable Register Update Interrupt Enable flag */
+	timer_enable_irq(TIM3, TIM_DIER_UIE);
+    /* Enable Counter */
+	timer_enable_counter(TIM3);
+}
+
+void tim3_isr(void)
+{
+	TIM_SR(TIM3) &= ~TIM_SR_UIF;
+    gpio_toggle(GPIOC, GPIO9);	/* LED on/off */
+    while(!adc_eoc(ADC1)); /* This shouldn't be a problem, ADC set to continuous */
+    adc_val = adc_read_regular(ADC1);
 }
 
 
@@ -91,7 +110,6 @@ int main(void)
 {
     int i;
     char buffer[256];
-    u16 adc_val;
     /* This is Space Invaders */
     /* [ctrl byte, char to change, bmp string] */
     unsigned char *mkch0 = "\x19\x00\x04\x03\x07\x0d\x1F\x17\x14\x03"
@@ -100,6 +118,7 @@ int main(void)
     gpio_setup();
     usart_setup();
 	adc_setup();
+    tim3_setup();
     clearlcd();
     /* Configure Space Invaders Characters */
     for(i = 0; i < 20; i++)
@@ -108,12 +127,9 @@ int main(void)
         clearlcd();
         /* Show Space Invaders Characters */
         printlcd("\x80\x81");
-        while(!adc_eoc(ADC1));
-        adc_val = adc_read_regular(ADC1);
         itoa(adc_val, buffer);
         printlcd(buffer);
         /* Blink the LED (PC9) on the board with every transmitted byte. */
-        gpio_toggle(GPIOC, GPIO9);	/* LED on/off */
         for (i = 0; i < 800000; i++)	/* Wait a bit. */
             __asm__("NOP");
     }
