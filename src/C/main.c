@@ -80,6 +80,13 @@ static void adc_setup(void)
     adc_start_conversion_direct(ADC1);
 }
 
+static void nvic_setup(void)
+{
+    nvic_enable_irq(NVIC_RTC_IRQ);
+    nvic_set_priority(NVIC_TRC_IRQ, 1);
+}
+
+
 int main(void)
 {
     int i;
