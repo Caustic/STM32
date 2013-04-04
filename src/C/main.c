@@ -21,12 +21,16 @@
 #include <libopencm3/stm32/f1/gpio.h>
 #include <libopencm3/stm32/usart.h>
 #include <libopencm3/stm32/f1/adc.h>
+#include <libopencm3/stm32/f1/dac.h>
 #include <libopencm3/stm32/f1/timer.h>
 #include <libopencm3/stm32/f1/nvic.h>
+#include <libopencm3/cm3/common.h>
 #include "str.h"
 #include "lcd.h"
+#include "filter.h"
 
 static volatile u16 adc_val;
+static volatile u16 adc_vald;
 
 static void clock_setup(void)
 {
@@ -35,6 +39,7 @@ static void clock_setup(void)
     rcc_peripheral_enable_clock(&RCC_APB2ENR, RCC_APB2ENR_IOPCEN);
     rcc_peripheral_enable_clock(&RCC_APB2ENR, RCC_APB2ENR_USART1EN);
 	rcc_peripheral_enable_clock(&RCC_APB2ENR, RCC_APB2ENR_ADC1EN);
+	rcc_peripheral_enable_clock(&RCC_APB1ENR, RCC_APB1ENR_DACEN);
 	rcc_peripheral_enable_clock(&RCC_APB1ENR, RCC_APB1ENR_TIM3EN);
 }
 
@@ -84,6 +89,29 @@ static void adc_setup(void)
     adc_start_conversion_direct(ADC1);
 }
 
+static void dac_setup(void)
+{
+    gpio_set_mode(GPIOA, GPIO_MODE_OUTPUT_50_MHZ, GPIO_CNF_OUTPUT_ALTFN_PUSHPULL, GPIO4);
+    gpio_set_mode(GPIOA, GPIO_MODE_OUTPUT_50_MHZ, GPIO_CNF_OUTPUT_ALTFN_PUSHPULL, GPIO5);
+    dac_disable(CHANNEL_1);
+    dac_disable(CHANNEL_2);
+    dac_dma_disable(CHANNEL_1);
+    dac_dma_disable(CHANNEL_2);
+    dac_trigger_disable(CHANNEL_1);
+    dac_trigger_disable(CHANNEL_2);
+    /*
+    dac_set_trigger_source(DAC_CR_TSEL1_SW);
+    dac_set_trigger_source(DAC_CR_TSEL2_SW);
+    */
+    dac_disable_waveform_generation(CHANNEL_1);
+    dac_disable_waveform_generation(CHANNEL_2);
+    dac_enable(CHANNEL_1);
+    dac_enable(CHANNEL_2);
+    /*
+    dac_trigger_enable(CHANNEL_2);
+    */
+}
+
 static void tim3_setup(void)
 {
     timer_reset(TIM3);
@@ -102,14 +130,15 @@ void tim3_isr(void)
 	TIM_SR(TIM3) &= ~TIM_SR_UIF;
     gpio_toggle(GPIOC, GPIO9);	/* LED on/off */
     while(!adc_eoc(ADC1)); /* This shouldn't be a problem, ADC set to continuous */
+    adc_vald = adc_val;
     adc_val = adc_read_regular(ADC1);
 }
-
 
 int main(void)
 {
     int i;
     char buffer[256];
+    s32 hpd, lpd, av, avd;
     /* This is Space Invaders */
     /* [ctrl byte, char to change, bmp string] */
     unsigned char *mkch0 = "\x19\x00\x04\x03\x07\x0d\x1F\x17\x14\x03"
@@ -118,20 +147,25 @@ int main(void)
     gpio_setup();
     usart_setup();
 	adc_setup();
+	dac_setup();
     tim3_setup();
     clearlcd();
+
+    hpd = 0;
+    lpd = 0;
     /* Configure Space Invaders Characters */
     for(i = 0; i < 20; i++)
         usart_send_blocking(USART1, *(mkch0+i));
-    while (1) {
-        clearlcd();
-        /* Show Space Invaders Characters */
+    clearlcd();
+    /* Show Space Invaders Character */
+    for(i = 0; i < 16; i++)
         printlcd("\x80\x81");
-        itoa(adc_val, buffer);
-        printlcd(buffer);
-        /* Blink the LED (PC9) on the board with every transmitted byte. */
-        for (i = 0; i < 800000; i++)	/* Wait a bit. */
-            __asm__("NOP");
+    while (1) {
+        av = adc_val - 2048;
+        avd = adc_vald - 2048;
+        lpd = lowpass(av, lpd);
+        hpd = highpass(av, avd, hpd);
+        dac_load_data_buffer_dual(lpd+2048, (hpd+2048), RIGHT12);
     }
     return 0;
 }

@@ -17,7 +17,7 @@
 ## along with this library.  If not, see <http://www.gnu.org/licenses/>.
 ##
 
-OBJS += str.o lcd.o
+OBJS += str.o lcd.o filter.o
 BINARY = main
 LDSCRIPT = $(OPENCM3_DIR)/examples/stm32/f1/stm32vl-discovery/stm32vl-discovery.ld
 include $(OPENCM3_DIR)/examples/stm32/f1/Makefile.include
@@ -27,3 +27,6 @@ str.o: str.h str.c
 
 lcd.o: lcd.h lcd.c
 	arm-none-eabi-gcc -Wall -pedantic -g -c -o lcd.o lcd.c -DSTM32F1 $(LDFLAGS)
+
+filter.o: filter.h filter.c
+	arm-none-eabi-gcc -Wall -pedantic -g -c -o filter.o filter.c -DSTM32F1 $(LDFLAGS)
