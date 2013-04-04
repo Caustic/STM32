@@ -3,7 +3,7 @@
 #include <libopencm3/cm3/common.h>
 
 /* LPCO / 1024 */
-#define LPCO 985
+#define LPCO 970
 /* HPCO / 1024 */
 #define HPCO 800
 

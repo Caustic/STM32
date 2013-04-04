@@ -158,14 +158,14 @@ int main(void)
         usart_send_blocking(USART1, *(mkch0+i));
     clearlcd();
     /* Show Space Invaders Character */
-    for(i = 0; i < 16; i++)
+    for(i = 0; i < 15; i++)
         printlcd("\x80\x81");
     while (1) {
         av = adc_val - 2048;
         avd = adc_vald - 2048;
         lpd = lowpass(av, lpd);
         hpd = highpass(av, avd, hpd);
-        dac_load_data_buffer_dual(lpd+2048, (hpd+2048), RIGHT12);
+        dac_load_data_buffer_dual(lpd+2048, ((hpd/4)+2048), RIGHT12);
     }
     return 0;
 }
