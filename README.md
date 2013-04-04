@@ -15,14 +15,19 @@ How to get Started
         git submodule update
 
 * __NOTE__: You can install GNU ARM Embedded Toolchain instead of Summon Arm Toolchain, just make sure its on your path!
-* Install Summon Arm Toolchain First
+* Install GNU ARM Embedded Toolchain first.
 
-        git clone git://github.com/esden/summon-arm-toolchain.git
-        cd summon-arm-toolchain
-        # There are some options that you can set before running this so check the readme if you want.
-        ./summon-arm-toolchain
-        # Make sure that `$SAR/arm/bin` is on your path where $SAR is the path Summon Arm Toolchain was installed
-        # In env.sh, there is a variable that you can set to point to this path
+        # Download latest package from https://launchpad.net/gcc-arm-embedded
+        # Untar to installation directory and add directory to your path
+        export PATH=PATH:$install_dir
+        # You're done!
+
+* Install libopencm3 to your toolchain directory
+        
+        cd ~/stm32/lib/libopencm3
+        # Next step requires that the toolhcain is on your $PATH (prev step)
+        # May need sudo if you installed GCC-ARM-Embedded to /usr/local
+        make DETECT_TOOLCHAIN=1 install
 
 * Install STLink next
 
